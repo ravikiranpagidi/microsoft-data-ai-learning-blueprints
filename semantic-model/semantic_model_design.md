@@ -42,3 +42,16 @@ Recommended first dashboard pages:
 ## Enterprise Recommendation
 
 Create one certified semantic model for shared reporting. Avoid creating separate report-specific models unless a clear ownership or performance reason exists.
+
+## Direct Lake vs Import Recommendation
+
+For Gold Lakehouse tables in Fabric, start with Direct Lake when the semantic model can use Fabric-native tables and does not need heavy Power Query shaping. This keeps the model close to OneLake data and avoids unnecessary duplication.
+
+Use Import mode when:
+
+- The model is small and scheduled refresh is acceptable.
+- The model combines sources that do not fit Direct Lake well.
+- Power Query transformations are required in the semantic model.
+- A required feature or modeling behavior is not supported by Direct Lake for the scenario.
+
+Document the choice in an ADR or model README before production release.

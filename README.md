@@ -1,5 +1,13 @@
 # Microsoft Fabric Data Engineering Blueprint
 
+[![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-Data%20Engineering-742774?style=for-the-badge)](https://learn.microsoft.com/fabric/)
+[![Data Engineering](https://img.shields.io/badge/Data%20Engineering-End--to--End-0078D4?style=for-the-badge)](docs/02-fabric-data-engineering-concepts.md)
+[![Lakehouse](https://img.shields.io/badge/Lakehouse-Medallion%20Architecture-0078D4?style=for-the-badge)](docs/05-medallion-architecture.md)
+[![PySpark](https://img.shields.io/badge/PySpark-Notebooks-E25A1C?style=for-the-badge)](notebooks/README.md)
+[![Delta Lake](https://img.shields.io/badge/Delta%20Lake-Tables-00A1F1?style=for-the-badge)](adr/003-why-use-delta-tables.md)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Semantic%20Model-F2C811?style=for-the-badge)](semantic-model/README.md)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Contributions%20Welcome-2EA44F?style=for-the-badge)](CONTRIBUTING.md)
+
 Practical, beginner-friendly, and enterprise-grade Microsoft Fabric Data Engineering blueprint for lakehouse-based analytics solutions.
 
 This repository uses a realistic **Retail Banking Customer Analytics** domain to show how source CSV data can move through a professional Fabric data engineering flow: source files, Data Pipelines, Lakehouse Files, Bronze Delta tables, Fabric Notebooks, Silver tables, Gold dimensional modeling, SQL analytics endpoint views, and Power BI semantic model guidance.
@@ -28,6 +36,25 @@ It is designed for:
 - How to apply data quality checks before publishing curated data.
 - How to think about governance, access control, PII, CI/CD, and deployment pipelines.
 - How to explain Fabric architecture in interviews, design reviews, and stakeholder sessions.
+
+## If You Are New to Fabric
+
+Think of this repository as a guided build of a real analytics project:
+
+| Concept | Beginner explanation |
+| --- | --- |
+| Workspace | The team area where Fabric items live. |
+| OneLake | The shared storage foundation behind Fabric data. |
+| Lakehouse | The place where files and Delta tables are stored for engineering and analytics. |
+| Data Pipeline | The orchestration layer that moves data and runs activities. |
+| Notebook | The code layer where PySpark transformations, validation, and modeling happen. |
+| Bronze | Raw data as it arrived, with ingestion metadata. |
+| Silver | Cleaned, typed, deduplicated, and validated data. |
+| Gold | Business-ready facts and dimensions for reporting. |
+| SQL analytics endpoint | SQL access over Lakehouse tables and views. |
+| Semantic model | The Power BI business layer with relationships and measures. |
+
+The simplest mental model is: **pipelines run the process, notebooks transform the data, Lakehouse stores the layers, SQL views simplify access, and Power BI tells the story.**
 
 ## End-to-End Architecture Overview
 
@@ -101,10 +128,67 @@ Business questions covered:
 | CI/CD | Git integration, deployment pipelines, release checklist |
 | Interview preparation | concept, scenario, and hands-on guides |
 
+## Fabric Decision Guide
+
+Use [docs/16-fabric-decision-guide.md](docs/16-fabric-decision-guide.md) during design reviews and proof-of-concept planning.
+
+| Decision | Short recommendation |
+| --- | --- |
+| Lakehouse vs Warehouse | Use Lakehouse for file, Spark, Delta, and medallion engineering. Use Warehouse for SQL-first relational serving patterns. |
+| Notebook vs Data Pipeline | Use notebooks for transformation logic and pipelines for orchestration. |
+| Dataflow Gen2 vs Notebook | Use Dataflow Gen2 for low-code shaping; notebooks for code-based engineering and complex rules. |
+| Shortcut vs Copy | Use shortcuts for reuse without duplication; copy when auditability and replay matter. |
+| Gold table vs SQL View | Use Gold tables for reusable curated assets; SQL views for business-friendly consumption. |
+| Star schema vs Wide table | Use star schema for governed BI; wide tables only for narrow, documented use cases. |
+| Direct Lake vs Import | Use Direct Lake for Fabric-native large models; Import for small, mixed-source, or Power Query-heavy models. |
+
+## Real-World Architecture Patterns
+
+See [architecture/real-world-architecture-patterns.md](architecture/real-world-architecture-patterns.md) for diagrams and implementation notes.
+
+| Pattern | Use when |
+| --- | --- |
+| Small team pattern | A small team is building its first Fabric proof of concept. |
+| Enterprise pattern | Dev/Test/Prod, governance, CI/CD, and production support are required. |
+| Data product pattern | A domain team owns reusable data for other teams. |
+| Self-service BI pattern | Analysts need governed flexibility without raw-data exposure. |
+| AI-ready lakehouse pattern | Curated data will support ML, semantic search, copilots, or analytics agents. |
+
+## Common Enterprise Mistakes
+
+The detailed guide is in [docs/17-common-enterprise-mistakes.md](docs/17-common-enterprise-mistakes.md).
+
+Common mistakes this blueprint helps correct:
+
+- Treating Fabric as only a Power BI reporting feature.
+- Giving too many users workspace admin access.
+- Building reports directly on Bronze data.
+- Skipping data quality until users find issues.
+- Hardcoding environment values in notebooks and pipelines.
+- Creating too many semantic models with conflicting measures.
+- Confusing pipeline success with data success.
+- Overusing wide tables instead of designing a star schema.
+- Ignoring PII until late in the project.
+- Promoting changes without a release checklist.
+
+## Fabric Project Checklist
+
+Use [checklists/fabric-project-checklist.md](checklists/fabric-project-checklist.md) before production release or architecture review.
+
+It covers workspace setup, naming standards, Lakehouse setup, data ingestion, transformation, data quality, security, governance, Power BI consumption, CI/CD, and production readiness.
+
 ## Exact Repository Structure
 
 ~~~text
 fabric-data-engineering-blueprint/
+|-- .github/
+|   |-- ISSUE_TEMPLATE/
+|   |   |-- bug_report.yml
+|   |   |-- config.yml
+|   |   |-- documentation_improvement.yml
+|   |   |-- feature_request.yml
+|   |   +-- new_example_request.yml
+|   +-- pull_request_template.md
 |-- adr/
 |   |-- 001-why-medallion-architecture.md
 |   |-- 002-why-gold-star-schema.md
@@ -112,6 +196,7 @@ fabric-data-engineering-blueprint/
 |   |-- 004-why-separate-engineering-and-consumption-layers.md
 |   |-- 005-why-use-dev-test-prod-workspaces.md
 |   |-- 006-why-apply-data-quality-before-gold-layer.md
+|   |-- 007-why-start-with-direct-lake-for-fabric-power-bi.md
 |   +-- README.md
 |-- architecture/
 |   |-- assets/
@@ -135,6 +220,10 @@ fabric-data-engineering-blueprint/
 |   |-- governance-model.md
 |   |-- lakehouse-to-powerbi-flow.md
 |   |-- medallion-architecture.md
+|   |-- README.md
+|   +-- real-world-architecture-patterns.md
+|-- checklists/
+|   |-- fabric-project-checklist.md
 |   +-- README.md
 |-- cicd/
 |   |-- deployment-pipeline-guide.md
@@ -171,7 +260,9 @@ fabric-data-engineering-blueprint/
 |   |-- 12-common-mistakes.md
 |   |-- 13-cost-and-performance-considerations.md
 |   |-- 14-fabric-for-azure-data-engineers.md
-|   +-- 15-learning-resources.md
+|   |-- 15-learning-resources.md
+|   |-- 16-fabric-decision-guide.md
+|   +-- 17-common-enterprise-mistakes.md
 |-- governance/
 |   |-- access-control-model.md
 |   |-- data-classification.md
@@ -194,6 +285,8 @@ fabric-data-engineering-blueprint/
 |   |-- 04_data_quality_checks.ipynb
 |   |-- 05_delta_optimization.ipynb
 |   |-- 06_powerbi_ready_views.ipynb
+|   |-- 07_incremental_load_pattern.ipynb
+|   |-- 08_operational_monitoring_examples.ipynb
 |   +-- README.md
 |-- pipelines/
 |   |-- ingestion_pipeline_template.json
@@ -202,6 +295,8 @@ fabric-data-engineering-blueprint/
 |   |-- README.md
 |   +-- transformation_pipeline_template.json
 |-- roadmap/
+|   |-- 30-day-learning-plan.md
+|   |-- 90-day-fabric-data-engineer-growth-plan.md
 |   |-- advanced-path.md
 |   |-- beginner-path.md
 |   |-- intermediate-path.md
@@ -220,11 +315,14 @@ fabric-data-engineering-blueprint/
 |   |-- README.md
 |   +-- semantic_model_design.md
 |-- sql/
+|   |-- advanced_analytics_examples.sql
 |   |-- business_metrics.sql
 |   |-- create_gold_views.sql
+|   |-- operational_monitoring_examples.sql
 |   |-- powerbi_consumption_views.sql
 |   |-- README.md
 |   +-- validation_queries.sql
+|-- .gitattributes
 |-- .gitignore
 |-- CHANGELOG.md
 |-- CODE_OF_CONDUCT.md
@@ -304,6 +402,8 @@ Recommended setup:
 | 04 | 04_data_quality_checks.ipynb | Run data quality checks and produce a pass/fail report |
 | 05 | 05_delta_optimization.ipynb | Apply table maintenance and optimization patterns |
 | 06 | 06_powerbi_ready_views.ipynb | Prepare reporting-friendly views and examples |
+| 07 | 07_incremental_load_pattern.ipynb | Learn a watermark-based incremental load pattern |
+| 08 | 08_operational_monitoring_examples.ipynb | Create simple audit and monitoring examples |
 
 ## How to Use the SQL Scripts
 
@@ -313,6 +413,8 @@ Open the Lakehouse SQL analytics endpoint and run scripts in this order:
 2. [sql/business_metrics.sql](sql/business_metrics.sql)
 3. [sql/validation_queries.sql](sql/validation_queries.sql)
 4. [sql/powerbi_consumption_views.sql](sql/powerbi_consumption_views.sql)
+5. [sql/advanced_analytics_examples.sql](sql/advanced_analytics_examples.sql)
+6. [sql/operational_monitoring_examples.sql](sql/operational_monitoring_examples.sql)
 
 ## How to Connect Power BI
 
@@ -360,18 +462,31 @@ Start with [docs/03-lakehouse-vs-warehouse.md](docs/03-lakehouse-vs-warehouse.md
 
 See [roadmap/](roadmap/README.md) for beginner, intermediate, and advanced learning paths.
 
+Structured plans:
+
+- [30-Day Learning Plan for Beginners](roadmap/30-day-learning-plan.md)
+- [90-Day Fabric Data Engineer Growth Plan](roadmap/90-day-fabric-data-engineer-growth-plan.md)
+
 Immediate future enhancements:
 
-- Incremental ingestion pattern.
-- Fabric Dataflow Gen2 comparison example.
-- Monitoring and alerting sample.
 - Larger synthetic transaction generator.
 - Power BI report template.
 - Optional deployment automation with Fabric APIs.
 
 ## Contributing
 
-Contributions are welcome when they improve clarity, correctness, or practical usefulness. Start with [CONTRIBUTING.md](CONTRIBUTING.md) and [community/contribution-tracker-template.md](community/contribution-tracker-template.md).
+Contributions are welcome when they improve clarity, correctness, practical usefulness, or enterprise readiness. Start with [CONTRIBUTING.md](CONTRIBUTING.md), use the GitHub issue templates, and review [community/contribution-tracker-template.md](community/contribution-tracker-template.md).
+
+Useful contribution areas:
+
+- Add new Fabric scenarios.
+- Improve notebooks or SQL examples.
+- Add Power BI report screenshots or templates.
+- Add data quality rule examples.
+- Add interview questions and hands-on labs.
+- Improve governance and CI/CD guidance.
+- Add decision guides, architecture patterns, or production monitoring examples.
+- Improve beginner explanations with diagrams and practical analogies.
 
 ## Author and Community
 
@@ -386,4 +501,7 @@ If this repository helps you learn or explain Microsoft Fabric, consider starrin
 - [OneLake documentation](https://learn.microsoft.com/fabric/onelake/)
 - [Fabric Git integration](https://learn.microsoft.com/fabric/cicd/git-integration/intro-to-git-integration)
 - [Fabric deployment pipelines](https://learn.microsoft.com/fabric/cicd/deployment-pipelines/intro-to-deployment-pipelines)
+- [Dataflow Gen2 overview](https://learn.microsoft.com/fabric/data-factory/dataflows-gen2-overview)
+- [Direct Lake overview](https://learn.microsoft.com/fabric/get-started/direct-lake-overview)
+- [Direct Lake semantic model development](https://learn.microsoft.com/fabric/fundamentals/direct-lake-edit-tables)
 - [Microsoft Fabric icons](https://learn.microsoft.com/fabric/fundamentals/icons)

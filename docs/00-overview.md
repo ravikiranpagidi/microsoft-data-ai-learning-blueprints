@@ -10,6 +10,14 @@ Build a practical learning and implementation path that takes a learner from raw
 
 ~~~text
 fabric-data-engineering-blueprint/
+|-- .github/
+|   |-- ISSUE_TEMPLATE/
+|   |   |-- bug_report.yml
+|   |   |-- config.yml
+|   |   |-- documentation_improvement.yml
+|   |   |-- feature_request.yml
+|   |   +-- new_example_request.yml
+|   +-- pull_request_template.md
 |-- adr/
 |   |-- 001-why-medallion-architecture.md
 |   |-- 002-why-gold-star-schema.md
@@ -17,6 +25,7 @@ fabric-data-engineering-blueprint/
 |   |-- 004-why-separate-engineering-and-consumption-layers.md
 |   |-- 005-why-use-dev-test-prod-workspaces.md
 |   |-- 006-why-apply-data-quality-before-gold-layer.md
+|   |-- 007-why-start-with-direct-lake-for-fabric-power-bi.md
 |   +-- README.md
 |-- architecture/
 |   |-- assets/
@@ -40,6 +49,10 @@ fabric-data-engineering-blueprint/
 |   |-- governance-model.md
 |   |-- lakehouse-to-powerbi-flow.md
 |   |-- medallion-architecture.md
+|   |-- README.md
+|   +-- real-world-architecture-patterns.md
+|-- checklists/
+|   |-- fabric-project-checklist.md
 |   +-- README.md
 |-- cicd/
 |   |-- deployment-pipeline-guide.md
@@ -76,7 +89,9 @@ fabric-data-engineering-blueprint/
 |   |-- 12-common-mistakes.md
 |   |-- 13-cost-and-performance-considerations.md
 |   |-- 14-fabric-for-azure-data-engineers.md
-|   +-- 15-learning-resources.md
+|   |-- 15-learning-resources.md
+|   |-- 16-fabric-decision-guide.md
+|   +-- 17-common-enterprise-mistakes.md
 |-- governance/
 |   |-- access-control-model.md
 |   |-- data-classification.md
@@ -99,6 +114,8 @@ fabric-data-engineering-blueprint/
 |   |-- 04_data_quality_checks.ipynb
 |   |-- 05_delta_optimization.ipynb
 |   |-- 06_powerbi_ready_views.ipynb
+|   |-- 07_incremental_load_pattern.ipynb
+|   |-- 08_operational_monitoring_examples.ipynb
 |   +-- README.md
 |-- pipelines/
 |   |-- ingestion_pipeline_template.json
@@ -107,6 +124,8 @@ fabric-data-engineering-blueprint/
 |   |-- README.md
 |   +-- transformation_pipeline_template.json
 |-- roadmap/
+|   |-- 30-day-learning-plan.md
+|   |-- 90-day-fabric-data-engineer-growth-plan.md
 |   |-- advanced-path.md
 |   |-- beginner-path.md
 |   |-- intermediate-path.md
@@ -125,11 +144,14 @@ fabric-data-engineering-blueprint/
 |   |-- README.md
 |   +-- semantic_model_design.md
 |-- sql/
+|   |-- advanced_analytics_examples.sql
 |   |-- business_metrics.sql
 |   |-- create_gold_views.sql
+|   |-- operational_monitoring_examples.sql
 |   |-- powerbi_consumption_views.sql
 |   |-- README.md
 |   +-- validation_queries.sql
+|-- .gitattributes
 |-- .gitignore
 |-- CHANGELOG.md
 |-- CODE_OF_CONDUCT.md
@@ -200,3 +222,14 @@ flowchart LR
 5. Run SQL scripts against the SQL analytics endpoint.
 6. Build the semantic model and dashboard recommendations.
 7. Review governance, CI/CD, ADRs, and interview guide.
+
+## New Community-Ready Sections
+
+Use these sections when you want to move beyond the basic walkthrough:
+
+- [Fabric Decision Guide](16-fabric-decision-guide.md) for architecture trade-offs.
+- [Common Enterprise Mistakes](17-common-enterprise-mistakes.md) for production-readiness risks and corrections.
+- [Real-World Architecture Patterns](../architecture/real-world-architecture-patterns.md) for small team, enterprise, data product, self-service BI, and AI-ready lakehouse patterns.
+- [Fabric Project Checklist](../checklists/fabric-project-checklist.md) for release and design reviews.
+- [30-Day Learning Plan](../roadmap/30-day-learning-plan.md) for beginners.
+- [90-Day Fabric Data Engineer Growth Plan](../roadmap/90-day-fabric-data-engineer-growth-plan.md) for professionals.

@@ -7,6 +7,7 @@
 - Keep natural keys visible only when report authors need drill-through or reconciliation.
 - Use a dedicated measures table if your modeling standard prefers it.
 - Mark dim_date as the date table.
+- Document whether the model uses Direct Lake or Import mode.
 
 ## Naming Standards
 
@@ -39,3 +40,4 @@ If row-level security is needed, define it in the semantic model using business 
 - Leaving technical keys visible to business users.
 - Using many-to-many relationships to hide data modeling issues.
 - Publishing reports without metric definitions.
+- Choosing Direct Lake or Import mode without documenting why.

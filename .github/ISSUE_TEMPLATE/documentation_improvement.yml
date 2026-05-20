@@ -1,0 +1,36 @@
+name: Documentation improvement
+description: Suggest a correction, clarification, or rewrite for docs.
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: File or section
+      placeholder: "docs/16-fabric-decision-guide.md"
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What should be improved?
+      description: Explain what is unclear, missing, outdated, or incorrect.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested wording or structure
+      description: Optional, but very helpful.
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Fixes incorrect information
+        - Improves beginner clarity
+        - Improves enterprise usefulness
+        - Improves navigation
+        - Other
+    validations:
+      required: true

@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a problem in documentation, notebooks, SQL, sample data, or templates.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the Fabric Data Engineering Blueprint.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - README or documentation
+        - Architecture diagrams
+        - Sample data
+        - Notebook
+        - SQL script
+        - Data quality framework
+        - Governance or CI/CD
+        - Semantic model guidance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include file names, notebook names, SQL scripts, or commands where relevant.
+      placeholder: |
+        1. Open ...
+        2. Run ...
+        3. See ...
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add screenshots, error messages, Fabric item names, or docs links if useful. Do not include secrets or production data.

@@ -12,6 +12,7 @@ This folder contains architecture views for the Retail Banking Customer Analytic
 | lakehouse-to-powerbi-flow.md | Consumption path from Lakehouse to semantic model |
 | cicd-flow.md | Dev, Test, Prod deployment path |
 | governance-model.md | Access, ownership, classification, and publishing model |
+| real-world-architecture-patterns.md | Small team, enterprise, data product, self-service BI, and AI-ready lakehouse patterns |
 
 ## Icon Guidance
 
@@ -27,3 +28,4 @@ Official icon reference: https://learn.microsoft.com/fabric/fundamentals/icons
 - Serve business users from Gold tables and views.
 - Separate engineering, consumption, and governance responsibilities.
 - Keep deployment paths repeatable and documented.
+- Choose the simplest pattern that meets ownership, quality, and security needs.

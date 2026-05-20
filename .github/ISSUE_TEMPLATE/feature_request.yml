@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest a new capability, guide, pattern, or repo enhancement.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What would this help learners, engineers, architects, or teams do better?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the feature or enhancement.
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Primary audience
+      options:
+        - Beginner learners
+        - Azure data engineers moving to Fabric
+        - Power BI developers
+        - Enterprise architects
+        - Interview candidates
+        - Community contributors
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches?
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Include links to official docs or examples where relevant.

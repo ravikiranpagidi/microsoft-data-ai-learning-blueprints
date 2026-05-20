@@ -46,4 +46,14 @@ Pair each learning session with a small hands-on task from the roadmap.
 - [SQL analytics endpoint](https://learn.microsoft.com/fabric/data-engineering/lakehouse-sql-analytics-endpoint)
 - [Fabric Git integration](https://learn.microsoft.com/fabric/cicd/git-integration/intro-to-git-integration)
 - [Fabric deployment pipelines](https://learn.microsoft.com/fabric/cicd/deployment-pipelines/intro-to-deployment-pipelines)
+- [Dataflow Gen2 overview](https://learn.microsoft.com/fabric/data-factory/dataflows-gen2-overview)
+- [Direct Lake overview](https://learn.microsoft.com/fabric/get-started/direct-lake-overview)
+- [Direct Lake semantic model development](https://learn.microsoft.com/fabric/fundamentals/direct-lake-edit-tables)
 - [Microsoft Fabric icons](https://learn.microsoft.com/fabric/fundamentals/icons)
+
+## Repository Learning Paths
+
+- [30-Day Learning Plan](../roadmap/30-day-learning-plan.md)
+- [90-Day Fabric Data Engineer Growth Plan](../roadmap/90-day-fabric-data-engineer-growth-plan.md)
+- [Fabric Decision Guide](16-fabric-decision-guide.md)
+- [Real-World Architecture Patterns](../architecture/real-world-architecture-patterns.md)

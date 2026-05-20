@@ -1,0 +1,39 @@
+name: New example request
+description: Request a new notebook, SQL script, architecture pattern, or sample scenario.
+title: "[Example]: "
+labels: ["example-request", "needs-triage"]
+body:
+  - type: dropdown
+    id: example_type
+    attributes:
+      label: Example type
+      options:
+        - Notebook
+        - SQL script
+        - Pipeline pattern
+        - Data quality rule
+        - Power BI semantic model
+        - Governance example
+        - CI/CD example
+        - Architecture pattern
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: What real-world scenario should the example cover?
+    validations:
+      required: true
+  - type: textarea
+    id: learning_outcome
+    attributes:
+      label: Learning outcome
+      description: What should a learner be able to do after using this example?
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Sample data requirements
+      description: Describe any entities, columns, or data shape needed. Do not include real customer or production data.
