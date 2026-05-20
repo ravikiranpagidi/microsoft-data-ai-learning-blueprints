@@ -1,0 +1,72 @@
+{
+  "name": "pl_transform_retail_banking_medallion",
+  "description": "Template-style Fabric Data Pipeline for Bronze to Silver to Gold transformation and quality gates.",
+  "parameters": {
+    "environment": {
+      "type": "String",
+      "defaultValue": "dev"
+    },
+    "batch_id": {
+      "type": "String",
+      "defaultValue": "dynamic-yyyyMMddHHmmss"
+    },
+    "run_optimization": {
+      "type": "Boolean",
+      "defaultValue": false
+    }
+  },
+  "activities": [
+    {
+      "name": "run_bronze_ingestion",
+      "type": "Notebook",
+      "notebook": "01_bronze_ingestion"
+    },
+    {
+      "name": "run_silver_transformation",
+      "type": "Notebook",
+      "notebook": "02_silver_transformation",
+      "dependsOn": [
+        "run_bronze_ingestion"
+      ]
+    },
+    {
+      "name": "run_gold_dimensional_model",
+      "type": "Notebook",
+      "notebook": "03_gold_dimensional_model",
+      "dependsOn": [
+        "run_silver_transformation"
+      ]
+    },
+    {
+      "name": "run_data_quality_checks",
+      "type": "Notebook",
+      "notebook": "04_data_quality_checks",
+      "dependsOn": [
+        "run_gold_dimensional_model"
+      ]
+    },
+    {
+      "name": "run_delta_optimization_optional",
+      "type": "Notebook",
+      "notebook": "05_delta_optimization",
+      "dependsOn": [
+        "run_data_quality_checks"
+      ],
+      "condition": "run_optimization == true"
+    },
+    {
+      "name": "notify_data_ready",
+      "type": "Notification",
+      "dependsOn": [
+        "run_data_quality_checks"
+      ]
+    }
+  ],
+  "gates": [
+    "Data quality checks must pass before semantic model refresh.",
+    "Failed runs should notify both data engineering and data owner groups."
+  ],
+  "notes": [
+    "This JSON documents a deployment pattern. Use Fabric exports or APIs for exact environment-specific pipeline artifacts."
+  ]
+}

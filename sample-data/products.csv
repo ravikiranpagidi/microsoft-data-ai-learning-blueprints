@@ -1,0 +1,11 @@
+product_id,product_name,product_category,product_family,fee_model,is_active,launch_date
+PROD001,Everyday Checking,Deposit,Consumer Banking,Monthly Fee,true,2018-01-01
+PROD002,High Yield Savings,Deposit,Consumer Banking,No Fee,true,2019-05-15
+PROD003,Rewards Credit Card,Credit,Consumer Lending,Interest and Fee,true,2020-02-10
+PROD004,Business Operating Account,Deposit,Business Banking,Monthly Fee,true,2017-08-01
+PROD005,Managed Investment Account,Investment,Wealth Management,Advisory Fee,true,2016-03-21
+PROD006,Home Equity Line of Credit,Credit,Consumer Lending,Interest,true,2021-09-01
+PROD007,Student Checking,Deposit,Consumer Banking,No Fee,true,2022-06-01
+PROD008,Certificate of Deposit,Deposit,Consumer Banking,Term Interest,true,2018-11-15
+PROD009,Merchant Services,Business Service,Business Banking,Transaction Fee,true,2020-10-01
+PROD010,Retirement Advisory,Investment,Wealth Management,Advisory Fee,true,2015-04-01

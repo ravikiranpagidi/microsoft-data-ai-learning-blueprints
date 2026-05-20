@@ -1,0 +1,11 @@
+branch_id,branch_name,city,state,region,opened_date,is_active
+BR001,Manhattan Central,New York,NY,Northeast,2010-01-15,true
+BR002,Jersey City Waterfront,Jersey City,NJ,Northeast,2014-05-01,true
+BR003,Chicago Loop,Chicago,IL,Midwest,2009-09-12,true
+BR004,Dallas North,Dallas,TX,South,2012-03-20,true
+BR005,Seattle Downtown,Seattle,WA,West,2016-07-11,true
+BR006,Boston Financial District,Boston,MA,Northeast,2008-04-22,true
+BR007,Atlanta Midtown,Atlanta,GA,South,2015-10-05,true
+BR008,Phoenix East,Phoenix,AZ,West,2018-02-17,true
+BR009,Miami Brickell,Miami,FL,South,2011-11-30,true
+BR010,Denver Union Station,Denver,CO,West,2017-06-19,true

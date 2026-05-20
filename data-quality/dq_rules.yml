@@ -1,0 +1,93 @@
+version: 1
+project: fabric-data-engineering-blueprint
+domain: retail_banking
+severity_levels:
+  critical: Pipeline should fail when the rule fails.
+  warning: Pipeline can continue, but the issue should be reviewed.
+
+tables:
+  silver_customers:
+    rules:
+      - name: customer_id_not_null
+        type: not_null
+        columns: [customer_id]
+        severity: critical
+      - name: customer_id_unique
+        type: duplicate_key
+        columns: [customer_id]
+        severity: critical
+      - name: customer_status_values
+        type: accepted_values
+        column: customer_status
+        values: [Active, Inactive]
+        severity: critical
+      - name: customer_segment_not_null
+        type: not_null
+        columns: [customer_segment]
+        severity: warning
+
+  silver_accounts:
+    rules:
+      - name: account_id_not_null
+        type: not_null
+        columns: [account_id]
+        severity: critical
+      - name: account_id_unique
+        type: duplicate_key
+        columns: [account_id]
+        severity: critical
+      - name: account_status_values
+        type: accepted_values
+        column: account_status
+        values: [Open, Closed]
+        severity: critical
+      - name: balance_reasonable_range
+        type: range
+        column: current_balance
+        min: -1000000
+        max: 10000000
+        severity: warning
+      - name: account_customer_integrity
+        type: referential_integrity
+        column: customer_id
+        parent_table: silver_customers
+        parent_column: customer_id
+        severity: critical
+
+  silver_transactions:
+    rules:
+      - name: transaction_id_not_null
+        type: not_null
+        columns: [transaction_id]
+        severity: critical
+      - name: transaction_id_unique
+        type: duplicate_key
+        columns: [transaction_id]
+        severity: critical
+      - name: transaction_status_values
+        type: accepted_values
+        column: transaction_status
+        values: [Posted, Rejected, Pending]
+        severity: critical
+      - name: transaction_account_integrity
+        type: referential_integrity
+        column: account_id
+        parent_table: silver_accounts
+        parent_column: account_id
+        severity: critical
+      - name: ingestion_freshness
+        type: freshness
+        column: _ingestion_timestamp
+        max_age_hours: 48
+        severity: warning
+
+  fact_transaction:
+    rules:
+      - name: fact_minimum_rows
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: fact_transaction_id_unique
+        type: duplicate_key
+        columns: [transaction_id]
+        severity: critical

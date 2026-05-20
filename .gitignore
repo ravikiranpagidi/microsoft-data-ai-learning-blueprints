@@ -1,0 +1,37 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Fabric local exports and temporary artifacts
+*.bak
+*.tmp
+*.log
+fabric-export/
+artifacts/
+
+# Data and secrets that should not be committed
+secrets.*
+*.key
+*.pem
+*.pfx
+local.settings.json
+
+# Power BI local files
+*.pbix
+*.pbit
+
+# Large generated data
+sample-output/
+warehouse-export/
+lakehouse-export/

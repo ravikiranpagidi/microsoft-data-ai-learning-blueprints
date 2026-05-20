@@ -1,0 +1,75 @@
+{
+  "name": "pl_ingest_retail_banking_csv_to_lakehouse",
+  "description": "Template-style Fabric Data Pipeline for landing Retail Banking CSV files into Lakehouse Files.",
+  "parameters": {
+    "environment": {
+      "type": "String",
+      "defaultValue": "dev"
+    },
+    "batch_id": {
+      "type": "String",
+      "defaultValue": "dynamic-yyyyMMddHHmmss"
+    },
+    "source_connection": {
+      "type": "String",
+      "defaultValue": "source-system-or-upload-location"
+    },
+    "target_folder": {
+      "type": "String",
+      "defaultValue": "Files/retail_banking/source"
+    }
+  },
+  "activities": [
+    {
+      "name": "set_batch_context",
+      "type": "SetVariable",
+      "description": "Create or receive the pipeline batch ID."
+    },
+    {
+      "name": "copy_customers_csv",
+      "type": "Copy",
+      "source": "customers.csv",
+      "sink": "Files/retail_banking/source/customers.csv"
+    },
+    {
+      "name": "copy_accounts_csv",
+      "type": "Copy",
+      "source": "accounts.csv",
+      "sink": "Files/retail_banking/source/accounts.csv"
+    },
+    {
+      "name": "copy_products_csv",
+      "type": "Copy",
+      "source": "products.csv",
+      "sink": "Files/retail_banking/source/products.csv"
+    },
+    {
+      "name": "copy_branches_csv",
+      "type": "Copy",
+      "source": "branches.csv",
+      "sink": "Files/retail_banking/source/branches.csv"
+    },
+    {
+      "name": "copy_transactions_csv",
+      "type": "Copy",
+      "source": "transactions.csv",
+      "sink": "Files/retail_banking/source/transactions.csv"
+    },
+    {
+      "name": "run_bronze_ingestion_notebook",
+      "type": "Notebook",
+      "notebook": "01_bronze_ingestion",
+      "dependsOn": [
+        "copy_customers_csv",
+        "copy_accounts_csv",
+        "copy_products_csv",
+        "copy_branches_csv",
+        "copy_transactions_csv"
+      ]
+    }
+  ],
+  "notes": [
+    "This is a readable template, not a direct exported Fabric artifact.",
+    "Replace connection, workspace, Lakehouse, and notebook identifiers per environment."
+  ]
+}

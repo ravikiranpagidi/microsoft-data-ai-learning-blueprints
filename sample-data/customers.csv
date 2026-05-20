@@ -1,0 +1,13 @@
+customer_id,first_name,last_name,email,phone,city,state,country,customer_segment,customer_status,date_of_birth,created_date
+CUST001,Aarav,Patel,aarav.patel@example.com,555-0101,New York,NY,USA,Mass Affluent,Active,1987-04-12,2021-02-15
+CUST002,Maya,Shah,maya.shah@example.com,555-0102,Jersey City,NJ,USA,Student,Active,2001-09-30,2022-08-20
+CUST003,Liam,Johnson,liam.johnson@example.com,555-0103,Chicago,IL,USA,Small Business,Active,1978-01-19,2020-06-01
+CUST004,Olivia,Williams,olivia.williams@example.com,555-0104,Dallas,TX,USA,Mass Market,Inactive,1992-11-05,2019-10-11
+CUST005,Noah,Brown,noah.brown@example.com,555-0105,Seattle,WA,USA,Mass Affluent,Active,1984-02-27,2021-07-22
+CUST006,Sophia,Davis,sophia.davis@example.com,555-0106,Boston,MA,USA,Private Banking,Active,1972-08-14,2018-03-03
+CUST007,Ethan,Miller,ethan.miller@example.com,555-0107,Atlanta,GA,USA,Mass Market,Active,1995-12-09,2022-01-18
+CUST008,Ava,Wilson,ava.wilson@example.com,555-0108,Phoenix,AZ,USA,Student,Active,2002-05-21,2023-05-09
+CUST009,Isabella,Garcia,isabella.garcia@example.com,555-0109,Miami,FL,USA,Mass Affluent,Active,1989-07-03,2020-12-14
+CUST010,Lucas,Martinez,lucas.martinez@example.com,555-0110,Denver,CO,USA,Small Business,Active,1981-03-16,2019-04-25
+CUST011,Emma,Anderson,emma.anderson@example.com,555-0111,San Diego,CA,USA,Mass Market,Active,1991-10-08,2021-09-17
+CUST012,James,Thomas,james.thomas@example.com,555-0112,Charlotte,NC,USA,Private Banking,Active,1969-06-22,2017-11-30
