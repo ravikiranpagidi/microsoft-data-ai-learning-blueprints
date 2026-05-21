@@ -1,14 +1,63 @@
-version: 1
+version: 2
 project: fabric-data-engineering-blueprint
-domain: retail_banking
+domain: retail_banking_customer_analytics
+description: >
+  Practical data quality rules for the Microsoft Fabric Retail Banking Customer
+  Analytics blueprint. Rules are designed for beginner readability while still
+  demonstrating enterprise-grade checks.
+
+settings:
+  fail_on_critical: true
+  results_table: dq_results
+  default_severity: warning
+  owner: data_engineering
+
 severity_levels:
-  critical: Pipeline should fail when the rule fails.
-  warning: Pipeline can continue, but the issue should be reviewed.
+  critical: Fail the pipeline or stop promotion when the rule fails.
+  warning: Continue processing, but review before business release.
 
 tables:
-  silver_customers:
+  bronze_customers:
+    layer: bronze
     rules:
-      - name: customer_id_not_null
+      - name: bronze_customers_loaded
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: bronze_customers_ingestion_metadata
+        type: not_null
+        columns: [_ingestion_timestamp, _source_file_name, _batch_id]
+        severity: critical
+
+  bronze_accounts:
+    layer: bronze
+    rules:
+      - name: bronze_accounts_loaded
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: bronze_accounts_ingestion_metadata
+        type: not_null
+        columns: [_ingestion_timestamp, _source_file_name, _batch_id]
+        severity: critical
+
+  bronze_transactions:
+    layer: bronze
+    rules:
+      - name: bronze_transactions_loaded
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: bronze_transactions_ingestion_metadata
+        type: not_null
+        columns: [_ingestion_timestamp, _source_file_name, _batch_id]
+        severity: critical
+
+  silver_customers:
+    layer: silver
+    business_key: customer_id
+    rules:
+      - name: customer_id_required
         type: not_null
         columns: [customer_id]
         severity: critical
@@ -16,27 +65,68 @@ tables:
         type: duplicate_key
         columns: [customer_id]
         severity: critical
-      - name: customer_status_values
+      - name: customer_status_valid
         type: accepted_values
         column: customer_status
         values: [Active, Inactive]
         severity: critical
-      - name: customer_segment_not_null
+      - name: customer_segment_required
         type: not_null
         columns: [customer_segment]
         severity: warning
+      - name: email_shape_review
+        type: sql_expression
+        expression: "email IS NOT NULL AND email NOT LIKE '%@%'"
+        severity: warning
+
+  silver_products:
+    layer: silver
+    business_key: product_id
+    rules:
+      - name: product_id_required
+        type: not_null
+        columns: [product_id]
+        severity: critical
+      - name: product_id_unique
+        type: duplicate_key
+        columns: [product_id]
+        severity: critical
+      - name: product_category_required
+        type: not_null
+        columns: [product_category, product_family]
+        severity: warning
+
+  silver_branches:
+    layer: silver
+    business_key: branch_id
+    rules:
+      - name: branch_id_required
+        type: not_null
+        columns: [branch_id]
+        severity: critical
+      - name: branch_id_unique
+        type: duplicate_key
+        columns: [branch_id]
+        severity: critical
+      - name: branch_region_valid
+        type: accepted_values
+        column: region
+        values: [Northeast, Midwest, South, West]
+        severity: warning
 
   silver_accounts:
+    layer: silver
+    business_key: account_id
     rules:
-      - name: account_id_not_null
+      - name: account_required_fields
         type: not_null
-        columns: [account_id]
+        columns: [account_id, customer_id, product_id, branch_id, account_status]
         severity: critical
       - name: account_id_unique
         type: duplicate_key
         columns: [account_id]
         severity: critical
-      - name: account_status_values
+      - name: account_status_valid
         type: accepted_values
         column: account_status
         values: [Open, Closed]
@@ -53,41 +143,165 @@ tables:
         parent_table: silver_customers
         parent_column: customer_id
         severity: critical
+      - name: account_product_integrity
+        type: referential_integrity
+        column: product_id
+        parent_table: silver_products
+        parent_column: product_id
+        severity: critical
+      - name: account_branch_integrity
+        type: referential_integrity
+        column: branch_id
+        parent_table: silver_branches
+        parent_column: branch_id
+        severity: critical
 
   silver_transactions:
+    layer: silver
+    business_key: transaction_id
     rules:
-      - name: transaction_id_not_null
+      - name: transaction_required_fields
         type: not_null
-        columns: [transaction_id]
+        columns:
+          - transaction_id
+          - account_id
+          - product_id
+          - branch_id
+          - transaction_timestamp
+          - transaction_amount
+          - currency
+          - transaction_status
         severity: critical
       - name: transaction_id_unique
         type: duplicate_key
         columns: [transaction_id]
         severity: critical
-      - name: transaction_status_values
+      - name: transaction_status_valid
         type: accepted_values
         column: transaction_status
         values: [Posted, Rejected, Pending]
         severity: critical
+      - name: transaction_channel_valid
+        type: accepted_values
+        column: transaction_channel
+        values: [Advisor, ATM, Branch, Card, Mobile, Online]
+        severity: warning
+      - name: transaction_amount_reasonable
+        type: range
+        column: transaction_amount
+        min: -100000000
+        max: 100000000
+        severity: warning
       - name: transaction_account_integrity
         type: referential_integrity
         column: account_id
         parent_table: silver_accounts
         parent_column: account_id
         severity: critical
-      - name: ingestion_freshness
+      - name: transaction_product_integrity
+        type: referential_integrity
+        column: product_id
+        parent_table: silver_products
+        parent_column: product_id
+        severity: critical
+      - name: transaction_branch_integrity
+        type: referential_integrity
+        column: branch_id
+        parent_table: silver_branches
+        parent_column: branch_id
+        severity: critical
+      - name: transaction_ingestion_freshness
         type: freshness
         column: _ingestion_timestamp
-        max_age_hours: 48
+        max_age_hours: 72
         severity: warning
 
-  fact_transaction:
+  dim_customer:
+    layer: gold
     rules:
-      - name: fact_minimum_rows
+      - name: dim_customer_has_rows
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: customer_surrogate_key_required
+        type: not_null
+        columns: [customer_key, customer_id]
+        severity: critical
+      - name: customer_surrogate_key_unique
+        type: duplicate_key
+        columns: [customer_key]
+        severity: critical
+
+  dim_account:
+    layer: gold
+    rules:
+      - name: dim_account_has_rows
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: account_surrogate_key_required
+        type: not_null
+        columns: [account_key, account_id, customer_id, product_id, branch_id]
+        severity: critical
+      - name: account_surrogate_key_unique
+        type: duplicate_key
+        columns: [account_key]
+        severity: critical
+
+  dim_product:
+    layer: gold
+    rules:
+      - name: dim_product_has_rows
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: product_surrogate_key_unique
+        type: duplicate_key
+        columns: [product_key]
+        severity: critical
+
+  dim_branch:
+    layer: gold
+    rules:
+      - name: dim_branch_has_rows
+        type: row_count_min
+        min_count: 1
+        severity: critical
+      - name: branch_surrogate_key_unique
+        type: duplicate_key
+        columns: [branch_key]
+        severity: critical
+
+  dim_date:
+    layer: gold
+    rules:
+      - name: dim_date_has_calendar_rows
+        type: row_count_min
+        min_count: 365
+        severity: warning
+      - name: date_key_unique
+        type: duplicate_key
+        columns: [date_key]
+        severity: critical
+
+  fact_transaction:
+    layer: gold
+    rules:
+      - name: fact_transaction_has_rows
         type: row_count_min
         min_count: 1
         severity: critical
       - name: fact_transaction_id_unique
         type: duplicate_key
         columns: [transaction_id]
+        severity: critical
+      - name: fact_required_keys
+        type: not_null
+        columns: [date_key, customer_key, account_key, product_key, branch_key]
+        severity: critical
+      - name: silver_to_gold_transaction_reconciliation
+        type: row_count_reconciliation
+        source_table: silver_transactions
+        target_table: fact_transaction
+        tolerance: 0
         severity: critical
