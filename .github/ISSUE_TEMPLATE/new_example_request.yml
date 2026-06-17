@@ -3,6 +3,14 @@ description: Request a new notebook, SQL script, architecture pattern, or sample
 title: "[Example]: "
 labels: ["example-request", "needs-triage"]
 body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic folder
+      description: Which topic should this example belong to?
+      placeholder: "fabric-data-engineering-blueprint"
+    validations:
+      required: true
   - type: dropdown
     id: example_type
     attributes:
@@ -10,6 +18,9 @@ body:
       options:
         - Notebook
         - SQL script
+        - DAX measure
+        - KQL query
+        - Python script
         - Pipeline pattern
         - Data quality rule
         - Power BI semantic model

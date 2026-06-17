@@ -4,16 +4,26 @@
 
 Describe what changed and why.
 
+## Topic folder
+
+Which folder does this change affect?
+
+- [ ] `fabric-data-engineering-blueprint`
+- [ ] New topic folder
+- [ ] Repository-wide files
+
 ## Type of change
 
 - [ ] Documentation
 - [ ] Notebook
 - [ ] SQL
+- [ ] DAX, KQL, or script
 - [ ] Data quality
 - [ ] Governance or CI/CD
 - [ ] Architecture
 - [ ] Sample data
 - [ ] Community or contribution workflow
+- [ ] New Microsoft learning topic
 
 ## Audience impact
 
@@ -25,6 +35,7 @@ Who benefits from this change?
 - [ ] Enterprise architects
 - [ ] Interview candidates
 - [ ] Community contributors
+- [ ] General Microsoft learning audience
 
 ## Validation
 
@@ -33,6 +44,7 @@ What did you run or review?
 - [ ] Markdown reviewed
 - [ ] Notebook JSON opens
 - [ ] SQL reviewed
+- [ ] DAX, KQL, or scripts reviewed
 - [ ] Sample data checked
 - [ ] No secrets or production data included
 - [ ] Links checked where relevant

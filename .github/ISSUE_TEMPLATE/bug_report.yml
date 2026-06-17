@@ -6,7 +6,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve the Fabric Data Engineering Blueprint.
+        Thanks for helping improve the Microsoft Learning Blueprints repository.
+  - type: input
+    id: topic
+    attributes:
+      label: Topic folder
+      description: Which topic folder is affected?
+      placeholder: "fabric-data-engineering-blueprint"
+    validations:
+      required: true
   - type: dropdown
     id: area
     attributes:
@@ -17,9 +25,10 @@ body:
         - Sample data
         - Notebook
         - SQL script
+        - DAX or semantic model
+        - KQL or real-time analytics
         - Data quality framework
         - Governance or CI/CD
-        - Semantic model guidance
         - Other
     validations:
       required: true

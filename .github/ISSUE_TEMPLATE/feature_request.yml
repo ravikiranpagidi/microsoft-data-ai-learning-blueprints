@@ -3,6 +3,14 @@ description: Suggest a new capability, guide, pattern, or repo enhancement.
 title: "[Feature]: "
 labels: ["enhancement", "needs-triage"]
 body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic folder
+      description: Which existing or proposed topic does this relate to?
+      placeholder: "fabric-data-engineering-blueprint or new-topic-name"
+    validations:
+      required: true
   - type: textarea
     id: problem
     attributes:
@@ -28,6 +36,7 @@ body:
         - Enterprise architects
         - Interview candidates
         - Community contributors
+        - General Microsoft learning audience
     validations:
       required: true
   - type: textarea
