@@ -71,10 +71,10 @@ Track row counts, DQ results, notebook duration, failed runs, table size, file c
 
 ## Related Repo Files
 
-- [notebooks/05_delta_optimization.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/05_delta_optimization.ipynb)
-- [docs/13-cost-and-performance-considerations.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/13-cost-and-performance-considerations.md)
-- [sql/operational_monitoring_examples.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/operational_monitoring_examples.sql)
-- [notebooks/08_operational_monitoring_examples.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/08_operational_monitoring_examples.ipynb)
+- [notebooks/05_delta_optimization.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/05_delta_optimization.ipynb)
+- [docs/13-cost-and-performance-considerations.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/13-cost-and-performance-considerations.md)
+- [sql/operational_monitoring_examples.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/operational_monitoring_examples.sql)
+- [notebooks/08_operational_monitoring_examples.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/08_operational_monitoring_examples.ipynb)
 
 ## Related Wiki Pages
 

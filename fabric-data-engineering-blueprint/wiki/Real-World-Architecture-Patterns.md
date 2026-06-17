@@ -161,10 +161,10 @@ Sensitive data and audit expectations are central to the project.
 
 ## Related Repo Files
 
-- [architecture/real-world-architecture-patterns.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/architecture/real-world-architecture-patterns.md)
-- [architecture/data-product-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/architecture/data-product-architecture.md)
-- [governance/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/governance)
-- [cicd/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/cicd)
+- [architecture/real-world-architecture-patterns.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/architecture/real-world-architecture-patterns.md)
+- [architecture/data-product-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/architecture/data-product-architecture.md)
+- [governance/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/governance)
+- [cicd/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/cicd)
 
 ## Related Wiki Pages
 

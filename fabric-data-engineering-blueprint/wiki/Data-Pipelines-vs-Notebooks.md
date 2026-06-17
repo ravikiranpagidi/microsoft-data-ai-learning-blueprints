@@ -66,9 +66,9 @@ A production pipeline might run: ingest source files -> run Bronze notebook -> r
 
 ## Related Repo Files
 
-- [pipelines/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/pipelines)
-- [notebooks/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/notebooks)
-- [docs/06-data-pipeline-vs-notebook.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/06-data-pipeline-vs-notebook.md)
+- [pipelines/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/pipelines)
+- [notebooks/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/notebooks)
+- [docs/06-data-pipeline-vs-notebook.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/06-data-pipeline-vs-notebook.md)
 
 ## Related Wiki Pages
 

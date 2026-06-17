@@ -78,10 +78,10 @@ A glossary keeps definitions stable. If Active Customer means customer_status eq
 
 ## Related Repo Files
 
-- [semantic-model/semantic_model_design.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/semantic-model/semantic_model_design.md)
-- [semantic-model/measures.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/semantic-model/measures.md)
-- [semantic-model/business_glossary.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/semantic-model/business_glossary.md)
-- [sql/business_metrics.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/business_metrics.sql)
+- [semantic-model/semantic_model_design.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/semantic-model/semantic_model_design.md)
+- [semantic-model/measures.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/semantic-model/measures.md)
+- [semantic-model/business_glossary.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/semantic-model/business_glossary.md)
+- [sql/business_metrics.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/business_metrics.sql)
 
 ## Related Wiki Pages
 

@@ -68,9 +68,9 @@ Notebook 01 reads transactions.csv from Files and writes bronze_transactions. It
 
 ## Related Repo Files
 
-- [notebooks/01_bronze_ingestion.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/01_bronze_ingestion.ipynb)
-- [pipelines/ingestion_pipeline_template.json](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/pipelines/ingestion_pipeline_template.json)
-- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
+- [notebooks/01_bronze_ingestion.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/01_bronze_ingestion.ipynb)
+- [pipelines/ingestion_pipeline_template.json](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/pipelines/ingestion_pipeline_template.json)
+- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
 
 ## Related Wiki Pages
 

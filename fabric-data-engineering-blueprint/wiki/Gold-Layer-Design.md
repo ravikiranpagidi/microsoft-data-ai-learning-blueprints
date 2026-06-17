@@ -67,10 +67,10 @@ Business users generally consume Gold tables, SQL views, or semantic models. Eng
 
 ## Related Repo Files
 
-- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
-- [sql/create_gold_views.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/create_gold_views.sql)
-- [semantic-model/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/semantic-model)
-- [adr/002-why-gold-star-schema.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/002-why-gold-star-schema.md)
+- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
+- [sql/create_gold_views.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/create_gold_views.sql)
+- [semantic-model/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/semantic-model)
+- [adr/002-why-gold-star-schema.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/002-why-gold-star-schema.md)
 
 ## Related Wiki Pages
 

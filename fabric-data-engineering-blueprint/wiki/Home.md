@@ -1,107 +1,90 @@
-# Microsoft Fabric Data Engineering Blueprint Wiki
+# Microsoft Data & AI Learning Blueprints Wiki
 
-> A practical learning portal for building lakehouse-based data engineering solutions with Microsoft Fabric.
+> A practical learning portal for Microsoft Fabric, Power BI, Azure Data, AI, governance, CI/CD, and real-world analytics engineering projects.
 
-Welcome to the Wiki for **fabric-data-engineering-blueprint**. This Wiki is the detailed learning guide, implementation handbook, and knowledge base for the repository. The README introduces the project; this Wiki helps you learn the concepts, run the sample implementation, understand the design decisions, and apply the patterns in real Microsoft Fabric projects.
+Welcome to the Wiki for **microsoft-data-ai-learning-blueprints**. This repository is organized as a collection of hands-on Microsoft Data and AI learning blueprints. Each major topic lives in its own folder, while this Wiki acts as the learning portal, implementation handbook, and community knowledge base.
 
-The blueprint uses a realistic **Retail Banking Customer Analytics** scenario to show how raw CSV files become trusted, governed, business-ready analytics assets through Microsoft Fabric Lakehouse, OneLake, Data Pipelines, Notebooks, PySpark, Delta tables, SQL Analytics Endpoint, and Power BI.
+The first active blueprint is **Microsoft Fabric Data Engineering**, built around a realistic **Retail Banking Customer Analytics** scenario. It teaches how raw CSV files become trusted, governed, business-ready analytics assets using Microsoft Fabric Lakehouse, OneLake, Data Pipelines, Notebooks, PySpark, Delta tables, SQL Analytics Endpoint, and Power BI.
 
-## Project Tagline
+## Repository Tagline
 
-**A beginner-friendly and enterprise-oriented Microsoft Fabric Data Engineering blueprint covering Lakehouse, OneLake, Data Pipelines, Notebooks, Spark, Medallion Architecture, Delta Tables, SQL Analytics Endpoint, Power BI consumption, governance, CI/CD, and real-world project structure.**
+**Practical Microsoft Data and AI learning blueprints for Fabric, Power BI, Azure Data, governance, CI/CD, and enterprise analytics engineering.**
 
 ## What This Wiki Is
 
-This Wiki is designed to feel like a structured learning portal, not a flat documentation dump. It explains the project from multiple angles:
+This Wiki is the detailed learning companion for the repository. The root README explains the overall repo structure. This Wiki helps learners and practitioners understand the concepts, run the examples, compare architecture choices, and prepare for real implementation conversations.
 
-| Area | What the Wiki Helps You Do |
+| Area | What This Wiki Helps You Do |
 | --- | --- |
-| Learning | Understand Microsoft Fabric Data Engineering step by step |
-| Implementation | Run the Retail Banking sample project from raw files to Power BI-ready data |
-| Architecture | Understand Lakehouse, medallion architecture, dimensional modeling, and data product patterns |
-| Decision-making | Choose between Lakehouse, Warehouse, Notebook, Pipeline, Dataflow Gen2, Shortcut, Copy, Direct Lake, and Import |
-| Enterprise readiness | Apply governance, access control, naming standards, data quality, CI/CD, and Dev/Test/Prod practices |
-| Career growth | Prepare for interviews, portfolio demos, community talks, and Fabric proof-of-concept discussions |
+| Learning | Understand Microsoft data and analytics concepts through guided paths |
+| Implementation | Run real examples from source data to curated analytics outputs |
+| Architecture | Compare platform choices, design patterns, governance models, and CI/CD approaches |
+| Career growth | Prepare for interviews, portfolio demos, blog posts, and community sessions |
+| Community | Contribute new topics, examples, corrections, and practical implementation notes |
+
+## Current Blueprint Catalog
+
+| Blueprint | Folder | Status | What It Teaches |
+| --- | --- | --- | --- |
+| Microsoft Fabric Data Engineering Blueprint | [fabric-data-engineering-blueprint](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint) | Active | Lakehouse, OneLake, pipelines, notebooks, Spark, Delta, medallion architecture, SQL endpoint, Power BI, governance, and CI/CD |
+
+## Future Blueprint Ideas
+
+These are natural next folders for the repository:
+
+| Future Topic | Possible Folder | Learning Focus |
+| --- | --- | --- |
+| Power BI Semantic Modeling | `power-bi-semantic-modeling-blueprint/` | Star schema, DAX, calculation groups, Direct Lake, deployment, governance |
+| Azure Data Engineering | `azure-data-engineering-blueprint/` | ADF, ADLS Gen2, Synapse, Databricks, orchestration, lake patterns |
+| Microsoft Purview Governance | `microsoft-purview-governance-blueprint/` | Catalog, lineage, classification, ownership, glossary, policy |
+| Fabric Real-Time Intelligence | `fabric-real-time-intelligence-blueprint/` | Eventstreams, KQL databases, real-time dashboards, operational analytics |
+| AI-Ready Data Engineering | `azure-ai-data-blueprint/` | Data preparation for AI, vector search, RAG pipelines, evaluation data |
 
 ## Who This Wiki Is For
 
 | Audience | Why This Wiki Helps |
 | --- | --- |
-| Beginners | Learn Fabric Data Engineering without needing to start from abstract theory |
-| Azure Data Engineers | Map ADF, Synapse, ADLS, SQL, and Databricks concepts to Fabric patterns |
-| Power BI Developers | Understand how curated Lakehouse data becomes a reliable semantic model |
-| Data Architects | Review platform, governance, medallion, data product, and CI/CD design patterns |
-| Students and Interview Candidates | Build practical examples for interviews and hands-on practice |
-| Enterprise Teams | Use the repo as a starting point for a Fabric proof of concept |
-| Community Contributors | Extend the blueprint with better examples, diagrams, docs, and implementation patterns |
-
-## What You Will Learn
-
-By working through this Wiki and the repository, you will learn how to:
-
-- Explain what Microsoft Fabric is and how its workloads fit together.
-- Use OneLake and Lakehouse concepts correctly.
-- Understand the difference between Lakehouse Files and Tables.
-- Ingest source CSV files into a Fabric Lakehouse.
-- Build Bronze, Silver, and Gold layers using PySpark notebooks.
-- Apply data quality checks before promoting data to business-ready layers.
-- Design dimensions and facts for a Retail Banking analytics model.
-- Query Lakehouse data through the SQL Analytics Endpoint.
-- Prepare curated data for Power BI semantic models and dashboards.
-- Make practical architecture decisions for Fabric projects.
-- Apply governance, naming, security, and PII handling guidance.
-- Plan CI/CD and Dev/Test/Prod promotion for Fabric artifacts.
-- Avoid common beginner and enterprise mistakes.
-- Use the project as a portfolio, interview, or community learning asset.
-
-## How To Use This Wiki
-
-Use this Wiki based on your current goal:
-
-| Goal | Recommended Approach |
-| --- | --- |
-| Learn from the beginning | Follow the Beginner path in order |
-| Run the sample project | Start with Getting Started, then run the notebooks and SQL scripts |
-| Prepare for interviews | Study the Decision Guide, Common Mistakes, Glossary, FAQ, and Interview Guide |
-| Design an enterprise proof of concept | Focus on Architecture Patterns, Governance, CI/CD, and Dev/Test/Prod |
-| Improve Power BI modeling skills | Read Gold Layer, Dimensional Modeling, SQL Endpoint, Power BI, and Semantic Model pages |
-| Contribute to the repo | Read the Contributor Guide and choose a focused improvement |
+| Beginners | Learn Microsoft data platforms through practical examples instead of abstract definitions |
+| Azure Data Engineers | Map ADF, Synapse, ADLS, Databricks, and SQL experience into Fabric and modern analytics patterns |
+| Power BI Developers | Understand how curated engineering layers support reliable semantic models and dashboards |
+| Data Architects | Review platform, governance, medallion, data product, and deployment patterns |
+| Students and Interview Candidates | Build practical project evidence and scenario-based answers |
+| Enterprise Teams | Use the blueprints as proof-of-concept starters and implementation checklists |
+| Community Contributors | Add new topics, better examples, diagrams, issue fixes, and learning content |
 
 ## Recommended Learning Paths
 
-### Beginner Path
+### 1. Microsoft Fabric Beginner Path
 
-Best for learners who are new to Microsoft Fabric or data engineering.
+Best for learners who are new to Fabric or modern lakehouse engineering.
 
-1. [Microsoft Fabric Fundamentals](Microsoft-Fabric-Fundamentals)
-2. [OneLake Explained](OneLake-Explained)
-3. [Lakehouse Concepts](Lakehouse-Concepts)
-4. [Files vs Tables in Fabric Lakehouse](Files-vs-Tables-in-Fabric-Lakehouse)
-5. [Getting Started](Getting-Started)
-6. [End-to-End Project Walkthrough](End-to-End-Project-Walkthrough)
-7. [Medallion Architecture](Medallion-Architecture)
-8. [30-Day Learning Plan](30-Day-Learning-Plan)
+1. [Getting Started](Getting-Started)
+2. [Microsoft Fabric Fundamentals](Microsoft-Fabric-Fundamentals)
+3. [OneLake Explained](OneLake-Explained)
+4. [Lakehouse Concepts](Lakehouse-Concepts)
+5. [Files vs Tables in Fabric Lakehouse](Files-vs-Tables-in-Fabric-Lakehouse)
+6. [Medallion Architecture](Medallion-Architecture)
+7. [30-Day Learning Plan](30-Day-Learning-Plan)
 
-Outcome: You can explain Fabric basics and run the project from CSV files to curated Delta tables.
+Outcome: You can explain Fabric basics and run the first blueprint from raw files to curated Lakehouse tables.
 
-### Azure Data Engineer Transition Path
+### 2. Azure Data Engineer Transition Path
 
-Best for engineers moving from Azure Data Factory, Synapse, ADLS Gen2, SQL, or Databricks into Microsoft Fabric.
+Best for data engineers moving from Azure Data Factory, Synapse, ADLS Gen2, Databricks, or SQL-based platforms.
 
 1. [Fabric Data Engineering Overview](Fabric-Data-Engineering-Overview)
-2. [OneLake Explained](OneLake-Explained)
-3. [Lakehouse vs Warehouse](Lakehouse-vs-Warehouse)
-4. [Data Pipelines vs Notebooks](Data-Pipelines-vs-Notebooks)
-5. [Dataflow Gen2 vs Notebook vs Pipeline](Dataflow-Gen2-vs-Notebook-vs-Pipeline)
+2. [Lakehouse vs Warehouse](Lakehouse-vs-Warehouse)
+3. [Data Pipelines vs Notebooks](Data-Pipelines-vs-Notebooks)
+4. [Dataflow Gen2 vs Notebook vs Pipeline](Dataflow-Gen2-vs-Notebook-vs-Pipeline)
+5. [Fabric Decision Guide](Fabric-Decision-Guide)
 6. [CI/CD and Deployment Strategy](CICD-and-Deployment-Strategy)
-7. [Dev/Test/Prod Workspace Strategy](Dev-Test-Prod-Workspace-Strategy)
-8. [90-Day Professional Growth Plan](90-Day-Professional-Growth-Plan)
+7. [90-Day Professional Growth Plan](90-Day-Professional-Growth-Plan)
 
-Outcome: You can translate familiar Azure architecture patterns into Fabric implementation choices.
+Outcome: You can translate familiar Azure data patterns into Microsoft Fabric choices.
 
-### Power BI Developer Path
+### 3. Power BI Developer Path
 
-Best for Power BI developers who want to understand Lakehouse engineering and semantic model readiness.
+Best for BI developers who want to understand how engineered Lakehouse data becomes a governed semantic model.
 
 1. [Gold Layer Design](Gold-Layer-Design)
 2. [Dimensional Modeling in Fabric](Dimensional-Modeling-in-Fabric)
@@ -109,28 +92,26 @@ Best for Power BI developers who want to understand Lakehouse engineering and se
 4. [SQL Analytics Endpoint Guide](SQL-Analytics-Endpoint-Guide)
 5. [Power BI Consumption Guide](Power-BI-Consumption-Guide)
 6. [Semantic Model Design](Semantic-Model-Design)
-7. [Fabric Decision Guide](Fabric-Decision-Guide)
 
-Outcome: You can explain why Power BI should consume curated Gold data instead of raw operational files.
+Outcome: You can explain why Power BI should consume curated Gold data instead of raw files or ad hoc transformations.
 
-### Data Architect Path
+### 4. Data Architect Path
 
-Best for solution architects, platform owners, and technical leads designing Fabric adoption patterns.
+Best for architects, platform owners, and technical leads.
 
 1. [Real-World Architecture Patterns](Real-World-Architecture-Patterns)
-2. [Medallion Architecture](Medallion-Architecture)
-3. [Fabric Decision Guide](Fabric-Decision-Guide)
-4. [Governance and Security](Governance-and-Security)
-5. [Access Control Model](Access-Control-Model)
-6. [PII and Sensitive Data Handling](PII-and-Sensitive-Data-Handling)
-7. [Architecture Decision Records Guide](Architecture-Decision-Records-Guide)
-8. [Performance and Optimization](Performance-and-Optimization)
+2. [Fabric Decision Guide](Fabric-Decision-Guide)
+3. [Governance and Security](Governance-and-Security)
+4. [Access Control Model](Access-Control-Model)
+5. [PII and Sensitive Data Handling](PII-and-Sensitive-Data-Handling)
+6. [Architecture Decision Records Guide](Architecture-Decision-Records-Guide)
+7. [Performance and Optimization](Performance-and-Optimization)
 
-Outcome: You can evaluate a Fabric proof of concept for scalability, governance, access, performance, and maintainability.
+Outcome: You can evaluate a Microsoft Fabric proof of concept for architecture quality, governance, performance, and production readiness.
 
-### Interview Preparation Path
+### 5. Interview Preparation Path
 
-Best for students, job seekers, and professionals preparing for Microsoft Fabric Data Engineering interviews.
+Best for students, job seekers, and professionals preparing for data engineering, Fabric, or analytics engineering interviews.
 
 1. [Glossary](Glossary)
 2. [FAQ](FAQ)
@@ -140,13 +121,13 @@ Best for students, job seekers, and professionals preparing for Microsoft Fabric
 6. [Retail Banking Sample Domain](Retail-Banking-Sample-Domain)
 7. [Building Dimensions and Facts](Building-Dimensions-and-Facts)
 
-Outcome: You can answer conceptual, scenario-based, and architecture questions using a real project example.
+Outcome: You can answer conceptual, hands-on, and architecture questions with examples from a real blueprint.
 
 ## Complete Wiki Navigation
 
 | # | Page | Use This Page To |
 | ---: | --- | --- |
-| 1 | [Home](Home) | Choose your path and understand the Wiki structure |
+| 1 | [Home](Home) | Choose a learning path and understand the repository direction |
 | 2 | [Getting Started](Getting-Started) | Set up Fabric, upload data, run notebooks, and validate outputs |
 | 3 | [Microsoft Fabric Fundamentals](Microsoft-Fabric-Fundamentals) | Understand Fabric workloads and platform concepts |
 | 4 | [Fabric Data Engineering Overview](Fabric-Data-Engineering-Overview) | Learn how Lakehouse, notebooks, Spark, pipelines, and SQL endpoint work together |
@@ -164,11 +145,11 @@ Outcome: You can answer conceptual, scenario-based, and architecture questions u
 | 16 | [Silver Layer Design](Silver-Layer-Design) | Clean, standardize, deduplicate, and validate data |
 | 17 | [Gold Layer Design](Gold-Layer-Design) | Build business-ready facts, dimensions, and consumption views |
 | 18 | [Dimensional Modeling in Fabric](Dimensional-Modeling-in-Fabric) | Learn star schema, facts, dimensions, keys, and grain |
-| 19 | [Building Dimensions and Facts](Building-Dimensions-and-Facts) | Build dim_customer, dim_account, dim_product, dim_branch, dim_date, and fact_transaction |
+| 19 | [Building Dimensions and Facts](Building-Dimensions-and-Facts) | Build dimensions and facts for Retail Banking analytics |
 | 20 | [SQL Analytics Endpoint Guide](SQL-Analytics-Endpoint-Guide) | Query Lakehouse tables and create SQL views for consumers |
 | 21 | [Power BI Consumption Guide](Power-BI-Consumption-Guide) | Connect Power BI to Fabric and consume Gold data responsibly |
 | 22 | [Semantic Model Design](Semantic-Model-Design) | Define measures, relationships, naming, glossary, and metric standards |
-| 23 | [Data Quality Framework](Data-Quality-Framework) | Use dq_rules.yml and dq_framework.py for quality checks |
+| 23 | [Data Quality Framework](Data-Quality-Framework) | Use rule-driven checks before business consumption |
 | 24 | [Governance and Security](Governance-and-Security) | Apply ownership, stewardship, least privilege, and auditability |
 | 25 | [Access Control Model](Access-Control-Model) | Design roles and access by Bronze, Silver, and Gold layers |
 | 26 | [PII and Sensitive Data Handling](PII-and-Sensitive-Data-Handling) | Identify and protect sensitive banking data |
@@ -176,7 +157,7 @@ Outcome: You can answer conceptual, scenario-based, and architecture questions u
 | 28 | [CI/CD and Deployment Strategy](CICD-and-Deployment-Strategy) | Plan Git integration, deployment pipelines, promotion, and releases |
 | 29 | [Dev/Test/Prod Workspace Strategy](Dev-Test-Prod-Workspace-Strategy) | Separate environments and promote Fabric assets safely |
 | 30 | [Performance and Optimization](Performance-and-Optimization) | Improve Delta, Spark, SQL, and Power BI performance |
-| 31 | [Common Mistakes and How to Avoid Them](Common-Mistakes-and-How-to-Avoid-Them) | Avoid common beginner and enterprise implementation issues |
+| 31 | [Common Mistakes and How to Avoid Them](Common-Mistakes-and-How-to-Avoid-Them) | Avoid beginner and enterprise implementation issues |
 | 32 | [Architecture Decision Records Guide](Architecture-Decision-Records-Guide) | Capture architecture choices with ADRs |
 | 33 | [Fabric Decision Guide](Fabric-Decision-Guide) | Use decision matrices for common Fabric architecture choices |
 | 34 | [Real-World Architecture Patterns](Real-World-Architecture-Patterns) | Compare small team, enterprise, data product, self-service BI, AI-ready, and regulated patterns |
@@ -187,9 +168,9 @@ Outcome: You can answer conceptual, scenario-based, and architecture questions u
 | 39 | [FAQ](FAQ) | Find answers to common Fabric and project questions |
 | 40 | [Glossary](Glossary) | Learn key Microsoft Fabric, lakehouse, modeling, governance, and CI/CD terms |
 
-## End-to-End Project Architecture
+## Active Blueprint Architecture
 
-The blueprint follows a practical CSV-to-dashboard flow. The goal is not only to load data, but to create a trusted, explainable, and reusable analytics foundation.
+The current Fabric blueprint follows this practical source-to-dashboard flow:
 
 ```mermaid
 flowchart LR
@@ -213,44 +194,9 @@ flowchart LR
     L --> F
 ```
 
-## Medallion Architecture
-
-The project uses a medallion architecture so each layer has a clear responsibility.
-
-```mermaid
-flowchart TB
-    subgraph Bronze["Bronze Layer: Raw and Auditable"]
-        B1["Raw customer, account, product, transaction, and branch records"]
-        B2["Ingestion timestamp"]
-        B3["Source file name"]
-        B4["Batch ID"]
-    end
-
-    subgraph Silver["Silver Layer: Clean and Standardized"]
-        S1["Clean column names"]
-        S2["Correct data types"]
-        S3["Standardized values"]
-        S4["Duplicate handling"]
-        S5["Business key validation"]
-        S6["Null and range checks"]
-    end
-
-    subgraph Gold["Gold Layer: Business-Ready"]
-        G1["dim_customer"]
-        G2["dim_account"]
-        G3["dim_product"]
-        G4["dim_branch"]
-        G5["dim_date"]
-        G6["fact_transaction"]
-        G7["Power BI-ready views"]
-    end
-
-    Bronze --> Silver --> Gold
-```
-
 ## Retail Banking Customer Analytics Scenario
 
-This Wiki uses a Retail Banking Customer Analytics project because it contains familiar business entities and realistic data engineering concerns.
+The active Fabric blueprint uses Retail Banking because it has familiar entities and realistic analytics questions.
 
 | Entity | Business Meaning | Example Questions |
 | --- | --- | --- |
@@ -261,103 +207,39 @@ This Wiki uses a Retail Banking Customer Analytics project because it contains f
 | Branch | A physical or organizational banking location | Which branches have high transaction activity? |
 | Date | A reusable calendar dimension | How do balances and transactions trend over time? |
 
-The final Gold model supports analysis such as:
+## Quick Start
 
-- Active customer count
-- Account count
-- Transaction count
-- Total transaction amount
-- Average transaction amount
-- Product usage
-- Branch activity
-- Customer segment distribution
-- Monthly transaction trends
-- Account balance trends
-
-## Quick Start Steps
-
-Use these steps when you want to run the project hands-on.
-
-1. Open the main repository: [fabric-data-engineering-blueprint](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint).
-2. Review the sample files in [sample-data](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/sample-data).
-3. Create a Microsoft Fabric workspace.
-4. Create a Lakehouse for the project.
+1. Open the main repository: [microsoft-data-ai-learning-blueprints](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints).
+2. Open the active topic folder: [fabric-data-engineering-blueprint](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint).
+3. Review the sample data in [sample-data](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/sample-data).
+4. Create a Microsoft Fabric workspace and Lakehouse.
 5. Upload the CSV files into the Lakehouse Files area.
-6. Run notebooks in order from [notebooks](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/notebooks):
-   - `00_setup_lakehouse.ipynb`
-   - `01_bronze_ingestion.ipynb`
-   - `02_silver_transformation.ipynb`
-   - `03_gold_dimensional_model.ipynb`
-   - `04_data_quality_checks.ipynb`
-   - `05_delta_optimization.ipynb`
-   - `06_powerbi_ready_views.ipynb`
-7. Run SQL scripts from [sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/sql) through the SQL Analytics Endpoint.
-8. Build or connect a Power BI semantic model using the Gold tables and views.
-9. Review governance, CI/CD, and production readiness pages before using the pattern in an enterprise proof of concept.
-
-Expected result: a working Fabric Lakehouse implementation with Bronze raw tables, Silver cleaned tables, Gold dimensions and facts, SQL views, data quality checks, and Power BI consumption guidance.
-
-## Key Repo Folders
-
-| Folder | Purpose |
-| --- | --- |
-| [docs](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/docs) | Conceptual documentation for Fabric Data Engineering topics |
-| [architecture](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/architecture) | Architecture diagrams and design explanations |
-| [sample-data](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/sample-data) | Retail Banking CSV files used by the project |
-| [notebooks](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/notebooks) | Fabric-compatible PySpark notebooks for setup, ingestion, transformation, modeling, quality, optimization, and views |
-| [pipelines](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/pipelines) | Pipeline templates and orchestration guidance |
-| [sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/sql) | SQL Analytics Endpoint scripts, metrics, validations, and Power BI-ready views |
-| [data-quality](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/data-quality) | Rule-driven data quality framework and examples |
-| [semantic-model](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/semantic-model) | Power BI semantic model guidance, measures, and business glossary |
-| [governance](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/governance) | Access control, PII, naming, ownership, and governance checklist |
-| [cicd](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/cicd) | Git integration, deployment pipeline, environment, and release guidance |
-| [adr](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/adr) | Architecture Decision Records explaining key design choices |
-| [interview-guide](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/interview-guide) | Interview questions, scenarios, architecture prompts, and practice tasks |
-| [roadmap](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/roadmap) | Beginner, intermediate, and advanced learning paths |
-| [community](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/community) | Blog, YouTube, meetup, and contribution planning resources |
-
-## Suggested First Milestones
-
-| Milestone | What To Complete | Proof You Are Learning |
-| --- | --- | --- |
-| Orientation | Read Home, Getting Started, Fabric Fundamentals, and OneLake | You can explain what Fabric and OneLake are |
-| First run | Upload sample CSVs and run setup plus Bronze notebook | Bronze Delta tables exist with ingestion metadata |
-| Clean data | Run Silver notebook and review transformation rules | Silver tables have clean types, names, and valid keys |
-| Business model | Run Gold notebook and SQL views | You can explain facts, dimensions, and table grain |
-| Quality gate | Run data quality notebook and review results | You can describe pass/fail checks and fixes |
-| Consumption | Review SQL endpoint and Power BI guidance | You can design a basic semantic model |
-| Enterprise lens | Review governance, CI/CD, and mistakes pages | You can explain production readiness gaps |
+6. Run notebooks in order from [notebooks](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/notebooks).
+7. Run SQL scripts from [sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/sql) through the SQL Analytics Endpoint.
+8. Review Power BI, governance, CI/CD, and interview preparation guidance.
 
 ## Contribution Invitation
 
-This project is intended to grow as a community learning resource for Microsoft Fabric Data Engineering. Contributions are welcome in many forms:
+This repository is intended to grow into a serious Microsoft Data and AI learning collection. Contributions are welcome when they improve clarity, hands-on usefulness, architecture quality, enterprise readiness, or community learning value.
 
-- Improve explanations for beginners.
-- Add diagrams or screenshots.
-- Add new notebook examples.
-- Add more data quality rules.
-- Add SQL validation and business metric examples.
-- Add Power BI semantic model guidance.
-- Add architecture decision records.
-- Add interview questions and hands-on tasks.
-- Add real-world implementation notes from Fabric projects.
-- Fix typos, broken links, unclear wording, or inconsistent naming.
+Useful contributions include:
 
-Start with the [Contributor Guide](Contributor-Guide), then open a focused issue or pull request.
+- New Microsoft Data and AI learning blueprint folders.
+- Better explanations for beginners.
+- More Fabric, Power BI, Azure Data, Purview, or AI examples.
+- Additional notebooks, SQL scripts, DAX measures, KQL queries, or pipeline templates.
+- Better governance, CI/CD, security, and monitoring guidance.
+- Interview questions, hands-on practice tasks, and portfolio examples.
+- Broken link fixes, typo fixes, and navigation improvements.
 
-## Professional Closing Note
-
-Microsoft Fabric is most valuable when teams understand both the platform and the engineering discipline behind it. This Wiki is designed to help learners move beyond isolated demos and toward clear, maintainable, governed, and business-ready data solutions.
-
-Use the blueprint as a learning project, a proof-of-concept starter, an interview preparation resource, a community contribution base, or a reference architecture discussion guide.
+Start with the [Contributor Guide](Contributor-Guide).
 
 ## Summary Checklist
 
-- [ ] I know what this Wiki is and how it differs from the README.
-- [ ] I selected the learning path that fits my background.
-- [ ] I understand the end-to-end CSV-to-dashboard architecture.
-- [ ] I understand the Bronze, Silver, and Gold layer responsibilities.
-- [ ] I know where the key repo folders are located.
+- [ ] I understand that this is now a Microsoft Data and AI learning hub.
+- [ ] I know that Fabric Data Engineering is the first active blueprint.
+- [ ] I know where the active topic folder lives in the main repository.
+- [ ] I selected a learning path that matches my background.
 - [ ] I know which Wiki page to read next.
 
 ---

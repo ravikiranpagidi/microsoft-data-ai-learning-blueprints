@@ -78,9 +78,9 @@ Power BI should not be the main data cleansing engine for this project. Heavy cl
 
 ## Related Repo Files
 
-- [semantic-model/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/semantic-model)
-- [sql/powerbi_consumption_views.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/powerbi_consumption_views.sql)
-- [notebooks/06_powerbi_ready_views.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/06_powerbi_ready_views.ipynb)
+- [semantic-model/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/semantic-model)
+- [sql/powerbi_consumption_views.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/powerbi_consumption_views.sql)
+- [notebooks/06_powerbi_ready_views.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/06_powerbi_ready_views.ipynb)
 
 ## Related Wiki Pages
 

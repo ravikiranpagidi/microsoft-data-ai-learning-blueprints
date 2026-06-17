@@ -72,9 +72,9 @@ All three can be part of production. The key is ownership and clarity. A product
 
 ## Related Repo Files
 
-- [docs/16-fabric-decision-guide.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/16-fabric-decision-guide.md)
-- [pipelines/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/pipelines)
-- [notebooks/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/notebooks)
+- [docs/16-fabric-decision-guide.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/16-fabric-decision-guide.md)
+- [pipelines/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/pipelines)
+- [notebooks/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/notebooks)
 
 ## Related Wiki Pages
 

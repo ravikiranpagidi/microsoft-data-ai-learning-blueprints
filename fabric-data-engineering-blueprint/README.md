@@ -13,7 +13,7 @@
 
 This repository is a complete, beginner-friendly, and enterprise-minded Microsoft Fabric Data Engineering learning project. It teaches **Lakehouse**, **OneLake**, **Data Pipelines**, **Fabric Notebooks**, **Spark**, **Medallion Architecture**, **Delta Tables**, **SQL Analytics Endpoint**, **Power BI consumption**, **data quality**, **governance**, **CI/CD**, and **real-world project structure** through an end-to-end **Retail Banking Customer Analytics** scenario.
 
-This blueprint now lives inside a broader Microsoft learning repository. All paths in this README are relative to the `fabric-data-engineering-blueprint/` folder.
+This blueprint now lives inside a broader Microsoft Data and AI learning repository. All paths in this README are relative to the `fabric-data-engineering-blueprint/` folder.
 
 It is designed to be more than a tutorial. The goal is to provide a reusable open-source blueprint that learners, practitioners, architects, and teams can study, run, extend, and adapt for proof-of-concept work.
 

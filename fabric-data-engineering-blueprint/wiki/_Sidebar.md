@@ -1,4 +1,18 @@
-# Fabric Data Engineering Blueprint Wiki
+# Microsoft Data & AI Learning Blueprints
+
+## Start Here
+
+- [Home](Home)
+- [Getting Started](Getting-Started)
+- [FAQ](FAQ)
+- [Glossary](Glossary)
+
+## Active Blueprint
+
+- [Fabric Data Engineering](Home)
+- [End-to-End Walkthrough](End-to-End-Project-Walkthrough)
+- [Retail Banking Domain](Retail-Banking-Sample-Domain)
+- [Sample Dataset Guide](Sample-Dataset-Guide)
 
 ## Learning Paths
 
@@ -9,14 +23,7 @@
 - [Interview Path](Interview-Preparation-Guide)
 - [Contributor Path](Contributor-Guide)
 
-## Start Here
-
-- [Home](Home)
-- [Getting Started](Getting-Started)
-- [FAQ](FAQ)
-- [Glossary](Glossary)
-
-## Foundation
+## Fabric Foundation
 
 - [Microsoft Fabric Fundamentals](Microsoft-Fabric-Fundamentals)
 - [Fabric Data Engineering Overview](Fabric-Data-Engineering-Overview)
@@ -27,11 +34,8 @@
 - [Data Pipelines vs Notebooks](Data-Pipelines-vs-Notebooks)
 - [Dataflow Gen2 vs Notebook vs Pipeline](Dataflow-Gen2-vs-Notebook-vs-Pipeline)
 
-## Build the Project
+## Build The Fabric Project
 
-- [End-to-End Walkthrough](End-to-End-Project-Walkthrough)
-- [Retail Banking Domain](Retail-Banking-Sample-Domain)
-- [Sample Dataset Guide](Sample-Dataset-Guide)
 - [Medallion Architecture](Medallion-Architecture)
 - [Bronze Layer](Bronze-Layer-Design)
 - [Silver Layer](Silver-Layer-Design)
@@ -56,7 +60,7 @@
 - [Dev/Test/Prod Strategy](Dev-Test-Prod-Workspace-Strategy)
 - [Performance and Optimization](Performance-and-Optimization)
 
-## Decisions and Growth
+## Decisions And Growth
 
 - [Common Mistakes](Common-Mistakes-and-How-to-Avoid-Them)
 - [ADR Guide](Architecture-Decision-Records-Guide)

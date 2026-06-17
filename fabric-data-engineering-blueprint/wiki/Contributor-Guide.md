@@ -113,10 +113,10 @@ Write like a senior teammate teaching a capable beginner. Be direct, concrete, a
 
 ## Related Repo Files
 
-- [CONTRIBUTING.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/CONTRIBUTING.md)
-- [CODE_OF_CONDUCT.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/CODE_OF_CONDUCT.md)
-- [.github/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/.github)
-- [community/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/community)
+- [CONTRIBUTING.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/CONTRIBUTING.md)
+- [CODE_OF_CONDUCT.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/CODE_OF_CONDUCT.md)
+- [.github/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/.github)
+- [community/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/community)
 
 ## Related Wiki Pages
 

@@ -66,9 +66,9 @@ Start broad in a learning workspace, but tighten access before production. Produ
 
 ## Related Repo Files
 
-- [governance/access-control-model.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/governance/access-control-model.md)
-- [governance/governance-checklist.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/governance/governance-checklist.md)
-- [cicd/release-checklist.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/cicd/release-checklist.md)
+- [governance/access-control-model.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/governance/access-control-model.md)
+- [governance/governance-checklist.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/governance/governance-checklist.md)
+- [cicd/release-checklist.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/cicd/release-checklist.md)
 
 ## Related Wiki Pages
 

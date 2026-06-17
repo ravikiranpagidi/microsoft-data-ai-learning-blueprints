@@ -76,10 +76,10 @@ Validation should check:
 
 ## Related Repo Files
 
-- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
-- [sql/validation_queries.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/validation_queries.sql)
-- [sql/business_metrics.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/business_metrics.sql)
-- [semantic-model/measures.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/semantic-model/measures.md)
+- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
+- [sql/validation_queries.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/validation_queries.sql)
+- [sql/business_metrics.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/business_metrics.sql)
+- [semantic-model/measures.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/semantic-model/measures.md)
 
 ## Related Wiki Pages
 

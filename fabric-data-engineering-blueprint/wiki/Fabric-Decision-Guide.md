@@ -129,9 +129,9 @@ A strong answer usually sounds like this: I would choose the tool based on the w
 
 ## Related Repo Files
 
-- [docs/16-fabric-decision-guide.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/16-fabric-decision-guide.md)
-- [adr/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/adr)
-- [architecture/real-world-architecture-patterns.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/architecture/real-world-architecture-patterns.md)
+- [docs/16-fabric-decision-guide.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/16-fabric-decision-guide.md)
+- [adr/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/adr)
+- [architecture/real-world-architecture-patterns.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/architecture/real-world-architecture-patterns.md)
 
 ## Related Wiki Pages
 

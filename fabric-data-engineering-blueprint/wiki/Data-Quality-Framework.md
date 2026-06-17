@@ -77,10 +77,10 @@ The framework produces a table with table_name, rule_name, rule_type, severity, 
 
 ## Related Repo Files
 
-- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
-- [data-quality/dq_framework.py](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_framework.py)
-- [notebooks/04_data_quality_checks.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/04_data_quality_checks.ipynb)
-- [data-quality/dq_examples.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_examples.md)
+- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
+- [data-quality/dq_framework.py](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_framework.py)
+- [notebooks/04_data_quality_checks.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/04_data_quality_checks.ipynb)
+- [data-quality/dq_examples.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_examples.md)
 
 ## Related Wiki Pages
 

@@ -128,10 +128,10 @@ By the end, you should be able to build a Fabric Lakehouse project, explain desi
 
 ## Related Repo Files
 
-- [roadmap/90-day-fabric-data-engineer-growth-plan.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/roadmap/90-day-fabric-data-engineer-growth-plan.md)
-- [community/blog-series-plan.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/community/blog-series-plan.md)
-- [community/youtube-demo-series.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/community/youtube-demo-series.md)
-- [adr/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/adr)
+- [roadmap/90-day-fabric-data-engineer-growth-plan.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/roadmap/90-day-fabric-data-engineer-growth-plan.md)
+- [community/blog-series-plan.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/community/blog-series-plan.md)
+- [community/youtube-demo-series.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/community/youtube-demo-series.md)
+- [adr/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/adr)
 
 ## Related Wiki Pages
 

@@ -68,9 +68,9 @@ In an enterprise proof of concept, Fabric lets a small team build the first vers
 
 ## Related Repo Files
 
-- [docs/01-what-is-microsoft-fabric.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/01-what-is-microsoft-fabric.md)
-- [docs/02-fabric-data-engineering-concepts.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/02-fabric-data-engineering-concepts.md)
-- [architecture/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/architecture)
+- [docs/01-what-is-microsoft-fabric.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/01-what-is-microsoft-fabric.md)
+- [docs/02-fabric-data-engineering-concepts.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/02-fabric-data-engineering-concepts.md)
+- [architecture/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/architecture)
 
 ## Related Wiki Pages
 

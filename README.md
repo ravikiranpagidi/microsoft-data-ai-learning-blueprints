@@ -1,14 +1,14 @@
-# Microsoft Learning Blueprints
+# Microsoft Data & AI Learning Blueprints
 
-> A practical, community-friendly learning hub for Microsoft data, analytics, AI, cloud, and business application tutorials.
+> A practical, community-friendly learning hub for Microsoft Fabric, Power BI, Azure Data, AI, governance, CI/CD, and analytics engineering tutorials.
 
-This repository is being organized as a single home for Microsoft learning projects. Each major topic lives in its own folder so the community can star, fork, watch, and contribute to one central repository while still keeping every learning path clean and focused.
+This repository is being organized as a single home for Microsoft Data and AI learning projects. Each major topic lives in its own folder so the community can star, fork, watch, and contribute to one central repository while still keeping every learning path clean and focused.
 
 The first blueprint in this collection is the **Microsoft Fabric Data Engineering Blueprint**, an end-to-end Retail Banking Customer Analytics project that teaches Fabric Lakehouse, OneLake, Data Pipelines, Notebooks, PySpark, Delta tables, SQL Analytics Endpoint, Power BI consumption, governance, CI/CD, and enterprise-ready project structure.
 
 ## Why This Repo Uses Topic Folders
 
-A single-topic repository is easy to start, but a topic-folder structure scales better for a public Microsoft learning portfolio.
+A single-topic repository is easy to start, but a topic-folder structure scales better for a public Microsoft Data and AI learning portfolio.
 
 | Benefit | Why It Matters |
 | --- | --- |
@@ -103,7 +103,7 @@ Contributions are welcome when they improve learning value, implementation quali
 
 Good contributions include:
 
-- New Microsoft learning blueprints.
+- New Microsoft Data and AI learning blueprints.
 - Better diagrams and decision guides.
 - Beginner-friendly explanations.
 - Hands-on notebooks, scripts, sample data, or templates.
@@ -115,6 +115,6 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## Professional Note
 
-This repository is intended to grow into a serious Microsoft learning collection. The goal is to keep each topic practical enough for learners, structured enough for practitioners, and thoughtful enough for architects and enterprise teams.
+This repository is intended to grow into a serious Microsoft Data and AI learning collection. The goal is to keep each topic practical enough for learners, structured enough for practitioners, and thoughtful enough for architects and enterprise teams.
 
 If a blueprint helps you, consider starring the repository, sharing it with other learners, and contributing improvements back to the community.

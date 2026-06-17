@@ -65,10 +65,10 @@ The SQL Analytics Endpoint is read-only for Lakehouse Delta tables. Use Spark no
 
 ## Related Repo Files
 
-- [sql/create_gold_views.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/create_gold_views.sql)
-- [sql/business_metrics.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/business_metrics.sql)
-- [sql/validation_queries.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/validation_queries.sql)
-- [sql/powerbi_consumption_views.sql](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sql/powerbi_consumption_views.sql)
+- [sql/create_gold_views.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/create_gold_views.sql)
+- [sql/business_metrics.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/business_metrics.sql)
+- [sql/validation_queries.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/validation_queries.sql)
+- [sql/powerbi_consumption_views.sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sql/powerbi_consumption_views.sql)
 
 ## Related Wiki Pages
 

@@ -86,12 +86,12 @@ Add new rows carefully. Preserve IDs and relationship integrity. If you add a ne
 
 ## Related Repo Files
 
-- [sample-data/customers.csv](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sample-data/customers.csv)
-- [sample-data/accounts.csv](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sample-data/accounts.csv)
-- [sample-data/products.csv](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sample-data/products.csv)
-- [sample-data/branches.csv](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sample-data/branches.csv)
-- [sample-data/transactions.csv](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/sample-data/transactions.csv)
-- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
+- [sample-data/customers.csv](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sample-data/customers.csv)
+- [sample-data/accounts.csv](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sample-data/accounts.csv)
+- [sample-data/products.csv](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sample-data/products.csv)
+- [sample-data/branches.csv](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sample-data/branches.csv)
+- [sample-data/transactions.csv](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/sample-data/transactions.csv)
+- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
 
 ## Related Wiki Pages
 

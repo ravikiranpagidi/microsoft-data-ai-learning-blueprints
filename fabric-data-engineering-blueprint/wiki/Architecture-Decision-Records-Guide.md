@@ -76,10 +76,10 @@ Create an ADR when a decision affects architecture, governance, CI/CD, security,
 
 ## Related Repo Files
 
-- [adr/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/adr)
-- [adr/README.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/README.md)
-- [adr/002-why-gold-star-schema.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/002-why-gold-star-schema.md)
-- [CONTRIBUTING.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/CONTRIBUTING.md)
+- [adr/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/adr)
+- [adr/README.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/README.md)
+- [adr/002-why-gold-star-schema.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/002-why-gold-star-schema.md)
+- [CONTRIBUTING.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/CONTRIBUTING.md)
 
 ## Related Wiki Pages
 

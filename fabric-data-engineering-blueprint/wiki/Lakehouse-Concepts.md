@@ -61,9 +61,9 @@ Delta tables add reliability and metadata on top of file-based storage. They sup
 
 ## Related Repo Files
 
-- [docs/03-lakehouse-vs-warehouse.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/03-lakehouse-vs-warehouse.md)
-- [notebooks/01_bronze_ingestion.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/01_bronze_ingestion.ipynb)
-- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
+- [docs/03-lakehouse-vs-warehouse.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/03-lakehouse-vs-warehouse.md)
+- [notebooks/01_bronze_ingestion.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/01_bronze_ingestion.ipynb)
+- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
 
 ## Related Wiki Pages
 

@@ -75,9 +75,9 @@ Track who owns sensitive data, who can access it, and why. Retain release checkl
 
 ## Related Repo Files
 
-- [governance/pii-handling.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/governance/pii-handling.md)
-- [governance/data-classification.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/governance/data-classification.md)
-- [semantic-model/business_glossary.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/semantic-model/business_glossary.md)
+- [governance/pii-handling.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/governance/pii-handling.md)
+- [governance/data-classification.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/governance/data-classification.md)
+- [semantic-model/business_glossary.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/semantic-model/business_glossary.md)
 
 ## Related Wiki Pages
 

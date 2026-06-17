@@ -67,9 +67,9 @@ This repo uses Lakehouse because the project starts with CSV files, applies PySp
 
 ## Related Repo Files
 
-- [docs/03-lakehouse-vs-warehouse.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/03-lakehouse-vs-warehouse.md)
-- [architecture/data-product-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/architecture/data-product-architecture.md)
-- [adr/001-why-medallion-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/001-why-medallion-architecture.md)
+- [docs/03-lakehouse-vs-warehouse.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/03-lakehouse-vs-warehouse.md)
+- [architecture/data-product-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/architecture/data-product-architecture.md)
+- [adr/001-why-medallion-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/001-why-medallion-architecture.md)
 
 ## Related Wiki Pages
 

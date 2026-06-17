@@ -64,9 +64,9 @@ Dimensional models help Power BI because relationships and filter paths are clea
 
 ## Related Repo Files
 
-- [semantic-model/semantic_model_design.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/semantic-model/semantic_model_design.md)
-- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
-- [adr/002-why-gold-star-schema.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/002-why-gold-star-schema.md)
+- [semantic-model/semantic_model_design.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/semantic-model/semantic_model_design.md)
+- [notebooks/03_gold_dimensional_model.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/03_gold_dimensional_model.ipynb)
+- [adr/002-why-gold-star-schema.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/002-why-gold-star-schema.md)
 
 ## Related Wiki Pages
 

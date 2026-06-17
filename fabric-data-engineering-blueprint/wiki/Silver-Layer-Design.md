@@ -64,9 +64,9 @@ Notebook 02 creates silver_transactions by casting transaction_timestamp, derivi
 
 ## Related Repo Files
 
-- [notebooks/02_silver_transformation.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/02_silver_transformation.ipynb)
-- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
-- [docs/05-medallion-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/05-medallion-architecture.md)
+- [notebooks/02_silver_transformation.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/02_silver_transformation.ipynb)
+- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
+- [docs/05-medallion-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/05-medallion-architecture.md)
 
 ## Related Wiki Pages
 

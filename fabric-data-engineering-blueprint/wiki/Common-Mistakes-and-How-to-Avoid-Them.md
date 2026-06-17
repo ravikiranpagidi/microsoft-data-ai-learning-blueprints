@@ -93,10 +93,10 @@ If you find one of these mistakes in the repo or Wiki, open a focused issue or p
 
 ## Related Repo Files
 
-- [docs/17-common-enterprise-mistakes.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/17-common-enterprise-mistakes.md)
-- [checklists/fabric-project-checklist.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/checklists/fabric-project-checklist.md)
-- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
-- [cicd/release-checklist.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/cicd/release-checklist.md)
+- [docs/17-common-enterprise-mistakes.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/17-common-enterprise-mistakes.md)
+- [checklists/fabric-project-checklist.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/checklists/fabric-project-checklist.md)
+- [data-quality/dq_rules.yml](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/data-quality/dq_rules.yml)
+- [cicd/release-checklist.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/cicd/release-checklist.md)
 
 ## Related Wiki Pages
 

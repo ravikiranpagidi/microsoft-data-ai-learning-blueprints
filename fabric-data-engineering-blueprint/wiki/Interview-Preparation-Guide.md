@@ -142,10 +142,10 @@ Strong structure:
 
 ## Related Repo Files
 
-- [interview-guide/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/interview-guide)
-- [roadmap/30-day-learning-plan.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/roadmap/30-day-learning-plan.md)
-- [roadmap/90-day-fabric-data-engineer-growth-plan.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/roadmap/90-day-fabric-data-engineer-growth-plan.md)
-- [README.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/README.md)
+- [interview-guide/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/interview-guide)
+- [roadmap/30-day-learning-plan.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/roadmap/30-day-learning-plan.md)
+- [roadmap/90-day-fabric-data-engineer-growth-plan.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/roadmap/90-day-fabric-data-engineer-growth-plan.md)
+- [README.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/README.md)
 
 ## Related Wiki Pages
 

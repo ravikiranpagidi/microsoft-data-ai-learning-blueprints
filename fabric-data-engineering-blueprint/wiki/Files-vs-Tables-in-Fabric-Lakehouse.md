@@ -69,9 +69,9 @@ Tables are created when Spark writes data using Delta table patterns such as sav
 
 ## Related Repo Files
 
-- [sample-data/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/sample-data)
-- [notebooks/01_bronze_ingestion.ipynb](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/notebooks/01_bronze_ingestion.ipynb)
-- [docs/04-onelake-explained.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/04-onelake-explained.md)
+- [sample-data/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/sample-data)
+- [notebooks/01_bronze_ingestion.ipynb](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/notebooks/01_bronze_ingestion.ipynb)
+- [docs/04-onelake-explained.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/04-onelake-explained.md)
 
 ## Related Wiki Pages
 

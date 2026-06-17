@@ -1,8 +1,8 @@
 # Contributing
 
-Thank you for considering a contribution to this Microsoft learning repository.
+Thank you for considering a contribution to this Microsoft Data and AI learning repository.
 
-This repo is organized as a collection of focused Microsoft learning blueprints. Each topic should be practical, beginner-friendly, and useful for real teams. Contributions should improve learning value, implementation quality, architecture clarity, or enterprise readiness.
+This repo is organized as a collection of focused Microsoft Data and AI learning blueprints. Each topic should be practical, beginner-friendly, and useful for real teams. Contributions should improve learning value, implementation quality, architecture clarity, or enterprise readiness.
 
 ## Contribution Philosophy
 

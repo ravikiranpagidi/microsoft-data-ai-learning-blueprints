@@ -61,9 +61,9 @@ In this repo, CSV files land under Files/retail_banking/source. Notebooks read t
 
 ## Related Repo Files
 
-- [docs/04-onelake-explained.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/04-onelake-explained.md)
-- [architecture/fabric-end-to-end-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/architecture/fabric-end-to-end-architecture.md)
-- [sample-data/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/sample-data)
+- [docs/04-onelake-explained.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/04-onelake-explained.md)
+- [architecture/fabric-end-to-end-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/architecture/fabric-end-to-end-architecture.md)
+- [sample-data/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/sample-data)
 
 ## Related Wiki Pages
 

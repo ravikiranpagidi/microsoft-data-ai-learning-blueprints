@@ -75,10 +75,10 @@ Keep release history. Know which notebooks, SQL scripts, and semantic model chan
 
 ## Related Repo Files
 
-- [cicd/dev-test-prod-strategy.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/cicd/dev-test-prod-strategy.md)
-- [cicd/environment-configuration.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/cicd/environment-configuration.md)
-- [cicd/release-checklist.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/cicd/release-checklist.md)
-- [adr/005-why-use-dev-test-prod-workspaces.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/005-why-use-dev-test-prod-workspaces.md)
+- [cicd/dev-test-prod-strategy.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/cicd/dev-test-prod-strategy.md)
+- [cicd/environment-configuration.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/cicd/environment-configuration.md)
+- [cicd/release-checklist.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/cicd/release-checklist.md)
+- [adr/005-why-use-dev-test-prod-workspaces.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/005-why-use-dev-test-prod-workspaces.md)
 
 ## Related Wiki Pages
 

@@ -63,10 +63,10 @@ Fabric Lakehouse tables are a natural fit for medallion architecture. Notebooks 
 
 ## Related Repo Files
 
-- [docs/05-medallion-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/docs/05-medallion-architecture.md)
-- [architecture/medallion-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/architecture/medallion-architecture.md)
-- [adr/001-why-medallion-architecture.md](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/blob/main/fabric-data-engineering-blueprint/adr/001-why-medallion-architecture.md)
-- [notebooks/](https://github.com/ravikiranpagidi/fabric-data-engineering-blueprint/tree/main/fabric-data-engineering-blueprint/notebooks)
+- [docs/05-medallion-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/docs/05-medallion-architecture.md)
+- [architecture/medallion-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/architecture/medallion-architecture.md)
+- [adr/001-why-medallion-architecture.md](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/blob/main/fabric-data-engineering-blueprint/adr/001-why-medallion-architecture.md)
+- [notebooks/](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/notebooks)
 
 ## Related Wiki Pages
 
