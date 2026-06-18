@@ -1,0 +1,16 @@
+{
+  "event_mix": {
+    "shipment": 0.45,
+    "vehicle": 0.35,
+    "warehouse": 0.20
+  },
+  "regions": ["Northeast", "Southeast", "Midwest", "Southwest", "West"],
+  "origins": ["Chicago DC", "Dallas Hub", "Atlanta DC", "Phoenix Hub", "Seattle DC"],
+  "destinations": ["Madison Store 12", "Austin Store 44", "Miami Store 09", "Denver Store 18", "Portland Store 31"],
+  "warehouses": ["WH-CHI-01", "WH-DAL-02", "WH-ATL-03", "WH-PHX-04", "WH-SEA-05"],
+  "routes": ["RTE-100", "RTE-120", "RTE-210", "RTE-330", "RTE-410"],
+  "shipment_statuses": ["Created", "PickedUp", "InTransit", "AtRisk", "Delayed", "Delivered"],
+  "default_count": 100,
+  "default_interval_seconds": 0.1,
+  "random_seed": 42
+}

@@ -1,0 +1,44 @@
+name: Blueprint validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-real-time-blueprint:
+    name: Validate Fabric Real-Time Intelligence blueprint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install event generator dependencies
+        working-directory: fabric-real-time-intelligence-blueprint/src/event-generator
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile Python files
+        run: |
+          python -m compileall fabric-real-time-intelligence-blueprint/src/event-generator
+
+      - name: Validate JSON files
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          for path in Path("fabric-real-time-intelligence-blueprint").rglob("*.json"):
+              with path.open("r", encoding="utf-8") as handle:
+                  json.load(handle)
+              print(f"validated {path}")
+
+      - name: Run tests
+        run: |
+          pytest fabric-real-time-intelligence-blueprint/tests

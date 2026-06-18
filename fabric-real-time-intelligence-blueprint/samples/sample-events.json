@@ -1,0 +1,71 @@
+[
+  {
+    "event_type": "shipment",
+    "shipment_id": "SHP-100045",
+    "order_id": "ORD-900120",
+    "vehicle_id": "VH-204",
+    "driver_id": "DRV-018",
+    "customer_region": "Midwest",
+    "origin": "Chicago DC",
+    "destination": "Madison Store 12",
+    "route_id": "RTE-100",
+    "planned_delivery_time": "2026-06-17T15:30:00Z",
+    "current_eta": "2026-06-17T16:05:00Z",
+    "shipment_status": "Delayed",
+    "delay_minutes": 35,
+    "temperature_required": true,
+    "event_timestamp": "2026-06-17T14:12:10Z"
+  },
+  {
+    "event_type": "vehicle",
+    "vehicle_id": "VH-204",
+    "latitude": 41.878113,
+    "longitude": -87.629799,
+    "speed_mph": 52.4,
+    "fuel_level": 44.8,
+    "engine_temperature": 211.6,
+    "harsh_braking": false,
+    "route_id": "RTE-100",
+    "event_timestamp": "2026-06-17T14:12:12Z"
+  },
+  {
+    "event_type": "warehouse",
+    "warehouse_id": "WH-CHI-01",
+    "zone_id": "ZONE-03",
+    "temperature": 47.8,
+    "humidity": 61.2,
+    "vibration_level": 2.1,
+    "door_open": true,
+    "refrigerated_zone": true,
+    "event_timestamp": "2026-06-17T14:12:15Z"
+  },
+  {
+    "event_type": "shipment",
+    "shipment_id": "SHP-100052",
+    "order_id": "ORD-900255",
+    "vehicle_id": "VH-118",
+    "driver_id": "DRV-044",
+    "customer_region": "Southeast",
+    "origin": "Atlanta DC",
+    "destination": "Miami Store 09",
+    "route_id": "RTE-210",
+    "planned_delivery_time": "2026-06-17T17:00:00Z",
+    "current_eta": "2026-06-17T17:10:00Z",
+    "shipment_status": "InTransit",
+    "delay_minutes": 10,
+    "temperature_required": false,
+    "event_timestamp": "2026-06-17T14:13:00Z"
+  },
+  {
+    "event_type": "vehicle",
+    "vehicle_id": "VH-118",
+    "latitude": 33.748997,
+    "longitude": -84.387985,
+    "speed_mph": 0,
+    "fuel_level": 12.5,
+    "engine_temperature": 232.4,
+    "harsh_braking": true,
+    "route_id": "RTE-210",
+    "event_timestamp": "2026-06-17T14:13:02Z"
+  }
+]

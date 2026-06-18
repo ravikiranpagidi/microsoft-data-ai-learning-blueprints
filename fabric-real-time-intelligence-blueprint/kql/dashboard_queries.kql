@@ -1,0 +1,56 @@
+// Real-Time Dashboard tile queries.
+
+// Tile: Current delayed shipment count.
+ShipmentEvents
+| where event_timestamp > ago(30m)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| summarize delayed_shipments = countif(delay_minutes > 0 or shipment_status == "Delayed")
+
+// Tile: Shipment status distribution.
+ShipmentEvents
+| where event_timestamp > ago(1h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| summarize shipment_count = count() by shipment_status
+| order by shipment_count desc
+
+// Tile: Average delay by region.
+ShipmentEvents
+| where event_timestamp > ago(4h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| summarize avg_delay_minutes = avg(delay_minutes) by customer_region
+| order by avg_delay_minutes desc
+
+// Tile: Vehicle health alerts.
+VehicleTelemetry
+| where event_timestamp > ago(30m)
+| summarize arg_max(event_timestamp, *) by vehicle_id
+| extend issue = case(
+    engine_temperature > 225, "Engine temperature",
+    fuel_level < 15, "Low fuel",
+    harsh_braking == true, "Harsh braking",
+    "None")
+| where issue != "None"
+| summarize vehicles = count() by issue
+
+// Tile: Warehouse condition breaches.
+WarehouseSensorEvents
+| where event_timestamp > ago(30m)
+| where (refrigerated_zone == true and (temperature < 35 or temperature > 45))
+    or (refrigerated_zone == false and (temperature < 55 or temperature > 85))
+| summarize breaches = count() by warehouse_id
+| order by breaches desc
+
+// Tile: Active vehicle map.
+VehicleTelemetry
+| where event_timestamp > ago(15m)
+| summarize arg_max(event_timestamp, *) by vehicle_id
+| project vehicle_id, latitude, longitude, speed_mph, fuel_level, engine_temperature, route_id, event_timestamp
+
+// Tile: Event volume trend.
+union
+    (ShipmentEvents | project event_type, event_timestamp),
+    (VehicleTelemetry | project event_type, event_timestamp),
+    (WarehouseSensorEvents | project event_type, event_timestamp)
+| where event_timestamp > ago(1h)
+| summarize event_count = count() by event_type, bin(event_timestamp, 1m)
+| order by event_timestamp asc

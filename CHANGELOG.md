@@ -4,6 +4,11 @@ All notable changes to the Microsoft Data and AI learning repository will be doc
 
 ## [Unreleased]
 
+### Added
+
+- Added `fabric-real-time-intelligence-blueprint/` as a new Microsoft Fabric Real-Time Intelligence topic folder.
+- Added event generator code, event schemas, sample data, KQL scripts, Lakehouse SQL, Power BI guidance, diagrams, docs, tests, and topic Wiki pages for the real-time blueprint.
+
 ### Changed
 
 - Reorganized the repository into a multi-topic learning hub structure.

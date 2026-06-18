@@ -1,0 +1,63 @@
+// Practical KQL queries for Eventhouse.
+
+// Latest shipment status by shipment.
+ShipmentEvents
+| where event_timestamp > ago(24h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| project event_timestamp, shipment_id, order_id, vehicle_id, customer_region, route_id, shipment_status, delay_minutes, current_eta
+| order by event_timestamp desc
+
+// Delayed shipments.
+ShipmentEvents
+| where event_timestamp > ago(2h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| where delay_minutes > 0 or shipment_status == "Delayed"
+| project shipment_id, vehicle_id, customer_region, route_id, origin, destination, delay_minutes, planned_delivery_time, current_eta
+| order by delay_minutes desc
+
+// Average delay by region.
+ShipmentEvents
+| where event_timestamp > ago(24h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| summarize shipments = count(), avg_delay_minutes = avg(delay_minutes), max_delay_minutes = max(delay_minutes) by customer_region
+| order by avg_delay_minutes desc
+
+// Vehicle telemetry anomalies.
+VehicleTelemetry
+| where event_timestamp > ago(30m)
+| where engine_temperature > 225 or fuel_level < 15 or harsh_braking == true or speed_mph > 75
+| project event_timestamp, vehicle_id, route_id, speed_mph, fuel_level, engine_temperature, harsh_braking, latitude, longitude
+| order by event_timestamp desc
+
+// Warehouse temperature breaches.
+WarehouseSensorEvents
+| where event_timestamp > ago(30m)
+| where (refrigerated_zone == true and (temperature < 35 or temperature > 45))
+    or (refrigerated_zone == false and (temperature < 55 or temperature > 85))
+| project event_timestamp, warehouse_id, zone_id, refrigerated_zone, temperature, humidity, door_open
+| order by event_timestamp desc
+
+// SLA breach candidates.
+ShipmentEvents
+| where event_timestamp > ago(2h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| where current_eta > planned_delivery_time and delay_minutes >= 20
+| extend sla_risk = case(delay_minutes >= 45, "High", delay_minutes >= 30, "Medium", "Watch")
+| project shipment_id, order_id, vehicle_id, route_id, customer_region, delay_minutes, sla_risk, planned_delivery_time, current_eta
+| order by delay_minutes desc
+
+// Event volume by minute.
+union
+    (ShipmentEvents | project event_type, event_timestamp),
+    (VehicleTelemetry | project event_type, event_timestamp),
+    (WarehouseSensorEvents | project event_type, event_timestamp)
+| where event_timestamp > ago(1h)
+| summarize event_count = count() by event_type, bin(event_timestamp, 1m)
+| order by event_timestamp asc
+
+// Top delayed routes.
+ShipmentEvents
+| where event_timestamp > ago(24h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| summarize delayed_shipments = countif(delay_minutes > 0), avg_delay_minutes = avg(delay_minutes), max_delay_minutes = max(delay_minutes) by route_id
+| order by delayed_shipments desc, avg_delay_minutes desc

@@ -1,0 +1,47 @@
+// JSON ingestion mappings for sample logistics events.
+
+.create-or-alter table ShipmentEvents ingestion json mapping "ShipmentEventsJsonMapping"
+'[
+  {"column":"event_type","path":"$.event_type","datatype":"string"},
+  {"column":"shipment_id","path":"$.shipment_id","datatype":"string"},
+  {"column":"order_id","path":"$.order_id","datatype":"string"},
+  {"column":"vehicle_id","path":"$.vehicle_id","datatype":"string"},
+  {"column":"driver_id","path":"$.driver_id","datatype":"string"},
+  {"column":"customer_region","path":"$.customer_region","datatype":"string"},
+  {"column":"origin","path":"$.origin","datatype":"string"},
+  {"column":"destination","path":"$.destination","datatype":"string"},
+  {"column":"route_id","path":"$.route_id","datatype":"string"},
+  {"column":"planned_delivery_time","path":"$.planned_delivery_time","datatype":"datetime"},
+  {"column":"current_eta","path":"$.current_eta","datatype":"datetime"},
+  {"column":"shipment_status","path":"$.shipment_status","datatype":"string"},
+  {"column":"delay_minutes","path":"$.delay_minutes","datatype":"int"},
+  {"column":"temperature_required","path":"$.temperature_required","datatype":"bool"},
+  {"column":"event_timestamp","path":"$.event_timestamp","datatype":"datetime"}
+]'
+
+.create-or-alter table VehicleTelemetry ingestion json mapping "VehicleTelemetryJsonMapping"
+'[
+  {"column":"event_type","path":"$.event_type","datatype":"string"},
+  {"column":"vehicle_id","path":"$.vehicle_id","datatype":"string"},
+  {"column":"latitude","path":"$.latitude","datatype":"real"},
+  {"column":"longitude","path":"$.longitude","datatype":"real"},
+  {"column":"speed_mph","path":"$.speed_mph","datatype":"real"},
+  {"column":"fuel_level","path":"$.fuel_level","datatype":"real"},
+  {"column":"engine_temperature","path":"$.engine_temperature","datatype":"real"},
+  {"column":"harsh_braking","path":"$.harsh_braking","datatype":"bool"},
+  {"column":"route_id","path":"$.route_id","datatype":"string"},
+  {"column":"event_timestamp","path":"$.event_timestamp","datatype":"datetime"}
+]'
+
+.create-or-alter table WarehouseSensorEvents ingestion json mapping "WarehouseSensorEventsJsonMapping"
+'[
+  {"column":"event_type","path":"$.event_type","datatype":"string"},
+  {"column":"warehouse_id","path":"$.warehouse_id","datatype":"string"},
+  {"column":"zone_id","path":"$.zone_id","datatype":"string"},
+  {"column":"temperature","path":"$.temperature","datatype":"real"},
+  {"column":"humidity","path":"$.humidity","datatype":"real"},
+  {"column":"vibration_level","path":"$.vibration_level","datatype":"real"},
+  {"column":"door_open","path":"$.door_open","datatype":"bool"},
+  {"column":"refrigerated_zone","path":"$.refrigerated_zone","datatype":"bool"},
+  {"column":"event_timestamp","path":"$.event_timestamp","datatype":"datetime"}
+]'

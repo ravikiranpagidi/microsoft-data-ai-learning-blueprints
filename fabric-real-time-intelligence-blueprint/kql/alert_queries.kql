@@ -1,0 +1,38 @@
+// Candidate KQL queries for Fabric Activator rules.
+
+// Shipment delay exceeds 30 minutes.
+ShipmentEvents
+| where event_timestamp > ago(15m)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| where delay_minutes > 30
+
+// SLA breach risk is high.
+ShipmentEvents
+| where event_timestamp > ago(15m)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| where delay_minutes >= 20 and current_eta > planned_delivery_time
+
+// Vehicle engine temperature exceeds threshold.
+VehicleTelemetry
+| where event_timestamp > ago(5m)
+| summarize arg_max(event_timestamp, *) by vehicle_id
+| where engine_temperature > 225
+
+// Warehouse temperature exceeds allowed range.
+WarehouseSensorEvents
+| where event_timestamp > ago(10m)
+| where refrigerated_zone == true
+| where temperature < 35 or temperature > 45
+
+// No telemetry received for a vehicle in 10 minutes.
+VehicleTelemetry
+| summarize last_seen = max(event_timestamp) by vehicle_id
+| where last_seen < ago(10m)
+
+// Repeated delay on the same route.
+ShipmentEvents
+| where event_timestamp > ago(1h)
+| summarize arg_max(event_timestamp, *) by shipment_id
+| where delay_minutes > 15
+| summarize delayed_shipments = count(), avg_delay_minutes = avg(delay_minutes) by route_id
+| where delayed_shipments >= 3

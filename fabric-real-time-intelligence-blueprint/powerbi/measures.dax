@@ -1,0 +1,29 @@
+Total Shipments =
+SUM ( shipment_sla_summary[total_shipments] )
+
+Delayed Shipments =
+SUM ( shipment_sla_summary[delayed_shipments] )
+
+Delay Rate =
+DIVIDE ( [Delayed Shipments], [Total Shipments] )
+
+Average Delay Minutes =
+AVERAGE ( shipment_sla_summary[average_delay_minutes] )
+
+SLA Breach Count =
+SUM ( shipment_sla_summary[sla_breach_candidates] )
+
+Active Vehicles =
+DISTINCTCOUNT ( vehicle_health_summary[vehicle_id] )
+
+Temperature Breach Count =
+SUM ( warehouse_condition_summary[temperature_breach_count] )
+
+On-Time Delivery Percentage =
+1 - [Delay Rate]
+
+Vehicle Alert Count =
+SUM ( vehicle_health_summary[vehicle_alert_count] )
+
+Harsh Braking Count =
+SUM ( vehicle_health_summary[harsh_braking_count] )

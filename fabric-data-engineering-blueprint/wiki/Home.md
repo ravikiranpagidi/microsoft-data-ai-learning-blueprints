@@ -4,7 +4,7 @@
 
 Welcome to the Wiki for **microsoft-data-ai-learning-blueprints**. This repository is organized as a collection of hands-on Microsoft Data and AI learning blueprints. Each major topic lives in its own folder, while this Wiki acts as the learning portal, implementation handbook, and community knowledge base.
 
-The first active blueprint is **Microsoft Fabric Data Engineering**, built around a realistic **Retail Banking Customer Analytics** scenario. It teaches how raw CSV files become trusted, governed, business-ready analytics assets using Microsoft Fabric Lakehouse, OneLake, Data Pipelines, Notebooks, PySpark, Delta tables, SQL Analytics Endpoint, and Power BI.
+The first active blueprint is **Microsoft Fabric Data Engineering**, built around a realistic **Retail Banking Customer Analytics** scenario. The second active blueprint is **Microsoft Fabric Real-Time Intelligence**, built around a **Smart Logistics and Operations Monitoring** scenario. Together they show both batch-oriented lakehouse engineering and streaming operational analytics on Fabric.
 
 ## Repository Tagline
 
@@ -27,6 +27,7 @@ This Wiki is the detailed learning companion for the repository. The root README
 | Blueprint | Folder | Status | What It Teaches |
 | --- | --- | --- | --- |
 | Microsoft Fabric Data Engineering Blueprint | [fabric-data-engineering-blueprint](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint) | Active | Lakehouse, OneLake, pipelines, notebooks, Spark, Delta, medallion architecture, SQL endpoint, Power BI, governance, and CI/CD |
+| Microsoft Fabric Real-Time Intelligence Blueprint | [fabric-real-time-intelligence-blueprint](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-real-time-intelligence-blueprint) | Active | Eventstream, Eventhouse, KQL Database, Real-Time Dashboard, Fabric Activator, Lakehouse, Power BI, operational alerts, and AI-ready event history |
 
 ## Future Blueprint Ideas
 
@@ -37,7 +38,6 @@ These are natural next folders for the repository:
 | Power BI Semantic Modeling | `power-bi-semantic-modeling-blueprint/` | Star schema, DAX, calculation groups, Direct Lake, deployment, governance |
 | Azure Data Engineering | `azure-data-engineering-blueprint/` | ADF, ADLS Gen2, Synapse, Databricks, orchestration, lake patterns |
 | Microsoft Purview Governance | `microsoft-purview-governance-blueprint/` | Catalog, lineage, classification, ownership, glossary, policy |
-| Fabric Real-Time Intelligence | `fabric-real-time-intelligence-blueprint/` | Eventstreams, KQL databases, real-time dashboards, operational analytics |
 | AI-Ready Data Engineering | `azure-ai-data-blueprint/` | Data preparation for AI, vector search, RAG pipelines, evaluation data |
 
 ## Who This Wiki Is For
@@ -168,7 +168,7 @@ Outcome: You can answer conceptual, hands-on, and architecture questions with ex
 | 39 | [FAQ](FAQ) | Find answers to common Fabric and project questions |
 | 40 | [Glossary](Glossary) | Learn key Microsoft Fabric, lakehouse, modeling, governance, and CI/CD terms |
 
-## Active Blueprint Architecture
+## Active Fabric Data Engineering Architecture
 
 The current Fabric blueprint follows this practical source-to-dashboard flow:
 
@@ -207,6 +207,18 @@ The active Fabric blueprint uses Retail Banking because it has familiar entities
 | Branch | A physical or organizational banking location | Which branches have high transaction activity? |
 | Date | A reusable calendar dimension | How do balances and transactions trend over time? |
 
+## Active Real-Time Intelligence Scenario
+
+The Real-Time Intelligence blueprint uses Smart Logistics and Operations Monitoring because it has clear event-driven business problems.
+
+| Event Area | Business Meaning | Example Questions |
+| --- | --- | --- |
+| Shipment events | Delivery status and ETA updates | Which shipments are delayed or at SLA risk? |
+| Vehicle telemetry | Vehicle location and health readings | Which vehicles show engine, fuel, speed, or safety concerns? |
+| Warehouse sensors | Temperature, humidity, vibration, and door events | Which zones have condition breaches? |
+| Customer app events | Customer-facing delivery interactions | Which orders require proactive communication? |
+| Weather context | External disruption signal | Which regions may see route delays? |
+
 ## Quick Start
 
 1. Open the main repository: [microsoft-data-ai-learning-blueprints](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints).
@@ -217,6 +229,14 @@ The active Fabric blueprint uses Retail Banking because it has familiar entities
 6. Run notebooks in order from [notebooks](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/notebooks).
 7. Run SQL scripts from [sql](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-data-engineering-blueprint/sql) through the SQL Analytics Endpoint.
 8. Review Power BI, governance, CI/CD, and interview preparation guidance.
+
+For the Real-Time Intelligence blueprint:
+
+1. Open the topic folder: [fabric-real-time-intelligence-blueprint](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-real-time-intelligence-blueprint).
+2. Generate sample logistics events with the Python event generator.
+3. Review KQL table and query scripts.
+4. Use Eventstream, Eventhouse, Real-Time Dashboard, and Activator design guidance.
+5. Review Lakehouse and Power BI extensions for historical analytics.
 
 ## Contribution Invitation
 

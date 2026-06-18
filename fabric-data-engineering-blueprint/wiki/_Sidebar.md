@@ -10,6 +10,7 @@
 ## Active Blueprint
 
 - [Fabric Data Engineering](Home)
+- [Fabric Real-Time Intelligence](https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints/tree/main/fabric-real-time-intelligence-blueprint)
 - [End-to-End Walkthrough](End-to-End-Project-Walkthrough)
 - [Retail Banking Domain](Retail-Banking-Sample-Domain)
 - [Sample Dataset Guide](Sample-Dataset-Guide)

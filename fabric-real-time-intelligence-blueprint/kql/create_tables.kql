@@ -1,0 +1,44 @@
+// Create tables for the Fabric Real-Time Intelligence logistics blueprint.
+
+.create-merge table ShipmentEvents (
+    event_type: string,
+    shipment_id: string,
+    order_id: string,
+    vehicle_id: string,
+    driver_id: string,
+    customer_region: string,
+    origin: string,
+    destination: string,
+    route_id: string,
+    planned_delivery_time: datetime,
+    current_eta: datetime,
+    shipment_status: string,
+    delay_minutes: int,
+    temperature_required: bool,
+    event_timestamp: datetime
+)
+
+.create-merge table VehicleTelemetry (
+    event_type: string,
+    vehicle_id: string,
+    latitude: real,
+    longitude: real,
+    speed_mph: real,
+    fuel_level: real,
+    engine_temperature: real,
+    harsh_braking: bool,
+    route_id: string,
+    event_timestamp: datetime
+)
+
+.create-merge table WarehouseSensorEvents (
+    event_type: string,
+    warehouse_id: string,
+    zone_id: string,
+    temperature: real,
+    humidity: real,
+    vibration_level: real,
+    door_open: bool,
+    refrigerated_zone: bool,
+    event_timestamp: datetime
+)

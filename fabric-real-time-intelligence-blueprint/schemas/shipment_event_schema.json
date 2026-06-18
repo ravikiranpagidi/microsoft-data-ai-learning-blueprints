@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shipment Event",
+  "type": "object",
+  "required": [
+    "event_type",
+    "shipment_id",
+    "order_id",
+    "vehicle_id",
+    "driver_id",
+    "customer_region",
+    "origin",
+    "destination",
+    "planned_delivery_time",
+    "current_eta",
+    "shipment_status",
+    "delay_minutes",
+    "temperature_required",
+    "event_timestamp"
+  ],
+  "properties": {
+    "event_type": { "const": "shipment" },
+    "shipment_id": { "type": "string", "pattern": "^SHP-[0-9]+$" },
+    "order_id": { "type": "string", "pattern": "^ORD-[0-9]+$" },
+    "vehicle_id": { "type": "string", "pattern": "^VH-[0-9]+$" },
+    "driver_id": { "type": "string", "pattern": "^DRV-[0-9]{3}$" },
+    "customer_region": { "type": "string" },
+    "origin": { "type": "string" },
+    "destination": { "type": "string" },
+    "route_id": { "type": "string" },
+    "planned_delivery_time": { "type": "string", "format": "date-time" },
+    "current_eta": { "type": "string", "format": "date-time" },
+    "shipment_status": {
+      "type": "string",
+      "enum": ["Created", "PickedUp", "InTransit", "AtRisk", "Delayed", "Delivered"]
+    },
+    "delay_minutes": { "type": "integer", "minimum": 0 },
+    "temperature_required": { "type": "boolean" },
+    "event_timestamp": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": true
+}
