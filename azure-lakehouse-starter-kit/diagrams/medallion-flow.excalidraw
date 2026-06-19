@@ -1,0 +1,12 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints",
+  "elements": [],
+  "appState": {
+    "gridSize": 20,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {},
+  "description": "Bronze raw Delta tables flow into Silver validated tables, then Gold dimensional tables and customer 360 marts."
+}

@@ -1,0 +1,49 @@
+rules:
+  - rule_id: DQ001
+    layer: silver
+    table: sil_customers
+    column: customer_id
+    rule_type: not_null
+    severity: high
+    description: Customer business key must be populated.
+  - rule_id: DQ002
+    layer: silver
+    table: sil_customers
+    column: customer_id
+    rule_type: duplicate
+    severity: high
+    description: Customer business key must be unique.
+  - rule_id: DQ003
+    layer: silver
+    table: sil_orders
+    column: order_total
+    rule_type: range
+    min_value: 0
+    severity: high
+    description: Order total cannot be negative.
+  - rule_id: DQ004
+    layer: silver
+    table: sil_orders
+    column: customer_id
+    rule_type: referential_integrity
+    parent_table: sil_customers
+    parent_column: customer_id
+    severity: high
+    description: Every order must reference a known customer.
+  - rule_id: DQ005
+    layer: silver
+    table: sil_order_items
+    column: product_id
+    rule_type: referential_integrity
+    parent_table: sil_products
+    parent_column: product_id
+    severity: high
+    description: Every order item must reference a known product.
+  - rule_id: DQ006
+    layer: gold
+    table: fact_sales
+    column: sales_amount
+    rule_type: range
+    min_value: 0
+    severity: high
+    description: Business-facing sales amount cannot be negative.

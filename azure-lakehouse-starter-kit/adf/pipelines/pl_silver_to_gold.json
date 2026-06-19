@@ -1,0 +1,85 @@
+{
+  "name": "pl_silver_to_gold",
+  "properties": {
+    "description": "Builds curated gold dimensional tables and customer analytics outputs from validated silver tables.",
+    "parameters": {
+      "batch_id": {
+        "type": "String",
+        "defaultValue": "@{pipeline().RunId}"
+      }
+    },
+    "activities": [
+      {
+        "name": "Build dimensions",
+        "type": "DatabricksNotebook",
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/03_gold/build_dim_customer",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@pipeline().parameters.batch_id",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "Build fact sales",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "Build dimensions",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/03_gold/build_fact_sales",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@pipeline().parameters.batch_id",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "Build customer 360",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "Build fact sales",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/03_gold/build_customer_360",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@pipeline().parameters.batch_id",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      }
+    ],
+    "annotations": [
+      "azure-lakehouse-starter-kit",
+      "gold"
+    ]
+  }
+}

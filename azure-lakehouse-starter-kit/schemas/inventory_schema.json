@@ -1,0 +1,17 @@
+{
+  "dataset": "inventory",
+  "format": "csv",
+  "primaryKey": ["inventory_id"],
+  "foreignKeys": [
+    {"column": "product_id", "references": "products.product_id"}
+  ],
+  "columns": [
+    {"name": "inventory_id", "type": "string", "nullable": false},
+    {"name": "product_id", "type": "string", "nullable": false},
+    {"name": "store_id", "type": "string", "nullable": false},
+    {"name": "inventory_date", "type": "date", "nullable": false},
+    {"name": "on_hand_quantity", "type": "integer", "nullable": false},
+    {"name": "reorder_level", "type": "integer", "nullable": false},
+    {"name": "supplier_name", "type": "string", "nullable": true}
+  ]
+}

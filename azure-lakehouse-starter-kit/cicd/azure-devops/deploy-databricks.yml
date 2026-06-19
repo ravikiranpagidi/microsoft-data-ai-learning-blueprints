@@ -1,0 +1,14 @@
+parameters:
+  - name: environment
+    type: string
+    default: dev
+
+steps:
+  - script: |
+      bash azure-lakehouse-starter-kit/scripts/deploy_databricks_assets.sh \
+        --workspace-url "$(databricksWorkspaceUrl)" \
+        --target-path "/Repos/$(repoOwner)/microsoft-data-ai-learning-blueprints/azure-lakehouse-starter-kit" \
+        --environment "${{ parameters.environment }}"
+    displayName: Deploy Databricks notebooks and job definitions
+    env:
+      DATABRICKS_TOKEN: $(databricksToken)

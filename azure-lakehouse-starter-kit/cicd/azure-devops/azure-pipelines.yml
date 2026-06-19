@@ -1,0 +1,40 @@
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - azure-lakehouse-starter-kit/*
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Validate
+    displayName: Validate Starter Kit
+    jobs:
+      - job: ValidateAssets
+        displayName: Validate JSON, Python, and sample data
+        steps:
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: "3.11"
+
+          - script: |
+              python -m compileall azure-lakehouse-starter-kit/databricks/notebooks azure-lakehouse-starter-kit/scripts
+              python azure-lakehouse-starter-kit/scripts/validate_notebooks.py
+              python -m pytest azure-lakehouse-starter-kit/tests
+            displayName: Run validation checks
+
+  - stage: DeployDev
+    displayName: Deploy To Dev
+    dependsOn: Validate
+    condition: succeeded()
+    jobs:
+      - job: DeployDev
+        displayName: Deploy ADF and Databricks assets
+        steps:
+          - script: |
+              echo "Deploy ADF assets with cicd/azure-devops/deploy-adf.yml"
+              echo "Deploy Databricks assets with cicd/azure-devops/deploy-databricks.yml"
+            displayName: Deployment placeholder

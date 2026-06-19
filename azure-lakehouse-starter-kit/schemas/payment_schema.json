@@ -1,0 +1,17 @@
+{
+  "dataset": "payments",
+  "format": "csv",
+  "primaryKey": ["payment_id"],
+  "foreignKeys": [
+    {"column": "order_id", "references": "orders.order_id"}
+  ],
+  "columns": [
+    {"name": "payment_id", "type": "string", "nullable": false},
+    {"name": "order_id", "type": "string", "nullable": false},
+    {"name": "payment_date", "type": "date", "nullable": false},
+    {"name": "payment_method", "type": "string", "nullable": false},
+    {"name": "payment_status", "type": "string", "nullable": false},
+    {"name": "payment_amount", "type": "decimal(12,2)", "nullable": false},
+    {"name": "currency", "type": "string", "nullable": false}
+  ]
+}

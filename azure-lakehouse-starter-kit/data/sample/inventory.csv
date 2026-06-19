@@ -1,0 +1,11 @@
+inventory_id,product_id,store_id,inventory_date,on_hand_quantity,reorder_level,supplier_name
+INV001,PROD001,STORE01,2024-06-30,18,5,Northwind Supply
+INV002,PROD002,STORE02,2024-06-30,42,10,Contoso Wholesale
+INV003,PROD003,STORE01,2024-06-30,25,8,Fabrikam Direct
+INV004,PROD004,STORE03,2024-06-30,120,30,AdventureWorks Foods
+INV005,PROD005,STORE04,2024-06-30,65,20,Contoso Wholesale
+INV006,PROD006,STORE04,2024-06-30,33,12,Fabrikam Direct
+INV007,PROD007,STORE02,2024-06-30,51,15,Northwind Supply
+INV008,PROD008,STORE05,2024-06-30,9,4,AdventureWorks Home
+INV009,PROD009,STORE01,2024-06-30,72,18,Contoso Wholesale
+INV010,PROD010,STORE03,2024-06-30,44,15,Fabrikam Direct

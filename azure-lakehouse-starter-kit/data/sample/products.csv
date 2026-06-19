@@ -1,0 +1,11 @@
+product_id,product_name,category,sub_category,brand,unit_price,is_active,effective_date
+PROD001,Everyday Laptop,Electronics,Computers,Northwind,899.99,true,2024-01-01
+PROD002,Wireless Earbuds,Electronics,Audio,Contoso,129.99,true,2024-01-01
+PROD003,Smart Fitness Watch,Electronics,Wearables,Fabrikam,219.50,true,2024-01-01
+PROD004,Organic Coffee Beans,Grocery,Beverages,AdventureWorks,18.75,true,2024-01-01
+PROD005,Insulated Water Bottle,Home,Kitchen,Contoso,26.40,true,2024-01-01
+PROD006,Running Shoes,Apparel,Footwear,Fabrikam,84.99,true,2024-01-01
+PROD007,Yoga Mat,Apparel,Fitness,Northwind,39.95,true,2024-01-01
+PROD008,Office Chair,Home,Furniture,AdventureWorks,189.00,true,2024-01-01
+PROD009,Desk Lamp,Home,Office,Contoso,42.25,true,2024-01-01
+PROD010,Tablet Stand,Electronics,Accessories,Fabrikam,31.99,true,2024-01-01

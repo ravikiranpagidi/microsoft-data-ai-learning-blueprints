@@ -42,3 +42,32 @@ jobs:
       - name: Run tests
         run: |
           pytest fabric-real-time-intelligence-blueprint/tests
+
+  validate-azure-lakehouse-starter-kit:
+    name: Validate Azure Lakehouse Starter Kit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependency
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+
+      - name: Compile Python files
+        run: |
+          python -m compileall azure-lakehouse-starter-kit/databricks/notebooks azure-lakehouse-starter-kit/scripts
+
+      - name: Validate JSON and notebook syntax
+        run: |
+          python azure-lakehouse-starter-kit/scripts/validate_notebooks.py
+
+      - name: Run tests
+        run: |
+          pytest azure-lakehouse-starter-kit/tests

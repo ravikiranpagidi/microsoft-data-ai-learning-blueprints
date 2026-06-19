@@ -1,0 +1,10 @@
+{
+  "name": "ls_keyvault",
+  "properties": {
+    "type": "AzureKeyVault",
+    "typeProperties": {
+      "baseUrl": "https://<key-vault-name>.vault.azure.net/"
+    },
+    "description": "Central secret store for source credentials, service principal secrets, and connection strings."
+  }
+}

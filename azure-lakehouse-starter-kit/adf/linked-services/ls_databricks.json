@@ -1,0 +1,12 @@
+{
+  "name": "ls_databricks",
+  "properties": {
+    "type": "AzureDatabricks",
+    "typeProperties": {
+      "domain": "https://<databricks-workspace-url>",
+      "authentication": "MSI",
+      "workspaceResourceId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Databricks/workspaces/<workspace-name>"
+    },
+    "description": "Azure Databricks workspace used by ADF notebook activities for bronze, silver, gold, and data quality jobs."
+  }
+}

@@ -1,0 +1,36 @@
+name: Azure Lakehouse Starter Kit Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Target environment
+        required: true
+        default: dev
+        type: choice
+        options:
+          - dev
+          - test
+          - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate before deployment
+        run: |
+          python -m compileall azure-lakehouse-starter-kit/databricks/notebooks azure-lakehouse-starter-kit/scripts
+          python azure-lakehouse-starter-kit/scripts/validate_notebooks.py
+
+      - name: Deploy Databricks assets
+        run: |
+          bash azure-lakehouse-starter-kit/scripts/deploy_databricks_assets.sh \
+            --workspace-url "${{ secrets.DATABRICKS_WORKSPACE_URL }}" \
+            --target-path "/Repos/${{ github.repository }}/azure-lakehouse-starter-kit" \
+            --environment "${{ inputs.environment }}"
+        env:
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}

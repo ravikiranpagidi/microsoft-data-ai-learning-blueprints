@@ -1,0 +1,120 @@
+{
+  "name": "pl_ingest_to_raw",
+  "properties": {
+    "description": "Metadata-driven ingestion pipeline that lands source files into ADLS Gen2 raw zone.",
+    "parameters": {
+      "batch_id": {
+        "type": "String",
+        "defaultValue": "@{pipeline().RunId}"
+      },
+      "source_metadata_path": {
+        "type": "String",
+        "defaultValue": "metadata/sample_source_metadata.csv"
+      }
+    },
+    "activities": [
+      {
+        "name": "Lookup active sources",
+        "type": "Lookup",
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource"
+          },
+          "dataset": {
+            "referenceName": "ds_adls_raw",
+            "type": "DatasetReference",
+            "parameters": {
+              "container": "raw",
+              "folderPath": "metadata",
+              "fileName": "sample_source_metadata.csv"
+            }
+          },
+          "firstRowOnly": false
+        }
+      },
+      {
+        "name": "For each active source",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Lookup active sources",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "items": {
+            "value": "@activity('Lookup active sources').output.value",
+            "type": "Expression"
+          },
+          "isSequential": false,
+          "batchCount": 5,
+          "activities": [
+            {
+              "name": "Copy source to raw",
+              "type": "Copy",
+              "typeProperties": {
+                "source": {
+                  "type": "DelimitedTextSource"
+                },
+                "sink": {
+                  "type": "DelimitedTextSink",
+                  "storeSettings": {
+                    "type": "AzureBlobFSWriteSettings"
+                  },
+                  "formatSettings": {
+                    "type": "DelimitedTextWriteSettings",
+                    "quoteAllText": true
+                  }
+                },
+                "enableStaging": false
+              },
+              "inputs": [
+                {
+                  "referenceName": "ds_adls_raw",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "container": "landing",
+                    "folderPath": {
+                      "value": "@item().source_name",
+                      "type": "Expression"
+                    },
+                    "fileName": {
+                      "value": "@item().source_object",
+                      "type": "Expression"
+                    }
+                  }
+                }
+              ],
+              "outputs": [
+                {
+                  "referenceName": "ds_adls_raw",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "container": {
+                      "value": "@item().target_container",
+                      "type": "Expression"
+                    },
+                    "folderPath": {
+                      "value": "@concat(item().target_folder, '/batch_id=', pipeline().parameters.batch_id)",
+                      "type": "Expression"
+                    },
+                    "fileName": {
+                      "value": "@item().target_file_name",
+                      "type": "Expression"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "annotations": [
+      "azure-lakehouse-starter-kit",
+      "raw-ingestion"
+    ]
+  }
+}

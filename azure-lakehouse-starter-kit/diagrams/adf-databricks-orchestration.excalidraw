@@ -1,0 +1,12 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://github.com/ravikiranpagidi/microsoft-data-ai-learning-blueprints",
+  "elements": [],
+  "appState": {
+    "gridSize": 20,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {},
+  "description": "Azure Data Factory master pipeline orchestrates raw ingestion, Databricks Bronze, Silver, data quality, Gold publishing, and alerting."
+}

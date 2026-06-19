@@ -1,0 +1,22 @@
+{
+  "name": "ds_rest_api",
+  "properties": {
+    "linkedServiceName": {
+      "referenceName": "ls_keyvault",
+      "type": "LinkedServiceReference"
+    },
+    "parameters": {
+      "relativeUrl": {
+        "type": "String"
+      }
+    },
+    "type": "RestResource",
+    "typeProperties": {
+      "relativeUrl": {
+        "value": "@dataset().relativeUrl",
+        "type": "Expression"
+      }
+    },
+    "description": "Template placeholder for REST-based sources such as web activity or customer behavior APIs."
+  }
+}

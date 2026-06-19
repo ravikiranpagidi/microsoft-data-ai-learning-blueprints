@@ -1,0 +1,13 @@
+payment_id,order_id,payment_date,payment_method,payment_status,payment_amount,currency
+PAY1001,ORD1001,2024-06-01,Credit Card,Captured,1029.98,USD
+PAY1002,ORD1002,2024-06-02,Digital Wallet,Captured,129.99,USD
+PAY1003,ORD1003,2024-06-04,Debit Card,Captured,58.70,USD
+PAY1004,ORD1004,2024-06-05,Credit Card,Captured,219.50,USD
+PAY1005,ORD1005,2024-06-08,Cash,Captured,84.99,USD
+PAY1006,ORD1006,2024-06-10,Credit Card,Captured,273.39,USD
+PAY1007,ORD1007,2024-06-12,Digital Wallet,Voided,189.00,USD
+PAY1008,ORD1008,2024-06-15,Credit Card,Captured,73.99,USD
+PAY1009,ORD1009,2024-06-18,Debit Card,Captured,31.99,USD
+PAY1010,ORD1010,2024-06-21,Credit Card,Captured,941.24,USD
+PAY1011,ORD1011,2024-06-25,Digital Wallet,Captured,42.25,USD
+PAY1012,ORD1012,2024-06-29,Credit Card,Captured,58.70,USD

@@ -1,0 +1,18 @@
+parameters:
+  - name: environment
+    type: string
+    default: dev
+
+steps:
+  - task: AzureCLI@2
+    displayName: Deploy Azure Data Factory templates
+    inputs:
+      azureSubscription: "$(azureServiceConnection)"
+      scriptType: pscore
+      scriptLocation: scriptPath
+      scriptPath: azure-lakehouse-starter-kit/scripts/deploy_adf.ps1
+      arguments: >
+        -ResourceGroupName $(resourceGroupName)
+        -DataFactoryName $(dataFactoryName)
+        -ArtifactPath azure-lakehouse-starter-kit/adf
+        -Environment ${{ parameters.environment }}

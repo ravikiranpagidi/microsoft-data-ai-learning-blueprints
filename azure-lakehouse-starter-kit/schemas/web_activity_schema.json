@@ -1,0 +1,19 @@
+{
+  "dataset": "web_activity",
+  "format": "jsonl",
+  "primaryKey": ["event_id"],
+  "foreignKeys": [
+    {"column": "customer_id", "references": "customers.customer_id"},
+    {"column": "product_id", "references": "products.product_id"}
+  ],
+  "columns": [
+    {"name": "event_id", "type": "string", "nullable": false},
+    {"name": "customer_id", "type": "string", "nullable": true},
+    {"name": "event_timestamp", "type": "timestamp", "nullable": false},
+    {"name": "event_type", "type": "string", "nullable": false},
+    {"name": "product_id", "type": "string", "nullable": true},
+    {"name": "session_id", "type": "string", "nullable": false},
+    {"name": "device_type", "type": "string", "nullable": true},
+    {"name": "traffic_source", "type": "string", "nullable": true}
+  ]
+}

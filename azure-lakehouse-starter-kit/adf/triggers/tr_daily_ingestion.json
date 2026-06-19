@@ -1,0 +1,26 @@
+{
+  "name": "tr_daily_ingestion",
+  "properties": {
+    "description": "Daily trigger for the master lakehouse orchestration pipeline.",
+    "type": "ScheduleTrigger",
+    "typeProperties": {
+      "recurrence": {
+        "frequency": "Day",
+        "interval": 1,
+        "startTime": "2026-01-01T06:00:00Z",
+        "timeZone": "UTC"
+      }
+    },
+    "pipelines": [
+      {
+        "pipelineReference": {
+          "referenceName": "pl_master_orchestration",
+          "type": "PipelineReference"
+        },
+        "parameters": {
+          "environment": "prod"
+        }
+      }
+    ]
+  }
+}

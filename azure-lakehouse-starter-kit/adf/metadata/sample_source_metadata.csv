@@ -1,0 +1,8 @@
+source_id,source_name,source_type,source_schema,source_object,target_container,target_folder,target_file_name,file_format,is_active,load_strategy,watermark_column
+1,customers,file,,customers.csv,raw,retail/customers,customers.csv,csv,true,full,
+2,products,file,,products.csv,raw,retail/products,products.csv,csv,true,full,
+3,orders,file,,orders.csv,raw,retail/orders,orders.csv,csv,true,incremental,order_date
+4,order_items,file,,order_items.csv,raw,retail/order_items,order_items.csv,csv,true,incremental,
+5,payments,file,,payments.csv,raw,retail/payments,payments.csv,csv,true,incremental,payment_date
+6,inventory,file,,inventory.csv,raw,retail/inventory,inventory.csv,csv,true,snapshot,inventory_date
+7,web_activity,file,,web_activity.json,raw,retail/web_activity,web_activity.json,json,true,incremental,event_timestamp

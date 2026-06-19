@@ -1,0 +1,97 @@
+{
+  "name": "pl_bronze_to_silver",
+  "properties": {
+    "description": "Runs Databricks notebooks that clean, standardize, deduplicate, and validate bronze Delta tables into silver tables.",
+    "parameters": {
+      "batch_id": {
+        "type": "String",
+        "defaultValue": "@{pipeline().RunId}"
+      },
+      "environment": {
+        "type": "String",
+        "defaultValue": "dev"
+      }
+    },
+    "activities": [
+      {
+        "name": "Run silver customer notebook",
+        "type": "DatabricksNotebook",
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/02_silver/clean_customer_silver",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@pipeline().parameters.batch_id",
+              "type": "Expression"
+            },
+            "environment": {
+              "value": "@pipeline().parameters.environment",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "Run silver sales notebooks",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "Run silver customer notebook",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/02_silver/clean_order_silver",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@pipeline().parameters.batch_id",
+              "type": "Expression"
+            },
+            "environment": {
+              "value": "@pipeline().parameters.environment",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "Run silver data quality checks",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "Run silver sales notebooks",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/04_data_quality/dq_null_checks",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@pipeline().parameters.batch_id",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      }
+    ],
+    "annotations": [
+      "azure-lakehouse-starter-kit",
+      "silver"
+    ]
+  }
+}

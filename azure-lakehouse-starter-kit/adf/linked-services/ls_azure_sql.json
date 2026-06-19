@@ -1,0 +1,10 @@
+{
+  "name": "ls_azure_sql",
+  "properties": {
+    "type": "AzureSqlDatabase",
+    "typeProperties": {
+      "connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=<server>.database.windows.net;Initial Catalog=<database>;User ID=<user>"
+    },
+    "description": "Optional relational source system linked service. Store credentials in Azure Key Vault for production."
+  }
+}

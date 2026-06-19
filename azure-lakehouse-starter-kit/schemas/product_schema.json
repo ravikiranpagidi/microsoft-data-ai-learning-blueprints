@@ -1,0 +1,15 @@
+{
+  "dataset": "products",
+  "format": "csv",
+  "primaryKey": ["product_id"],
+  "columns": [
+    {"name": "product_id", "type": "string", "nullable": false},
+    {"name": "product_name", "type": "string", "nullable": false},
+    {"name": "category", "type": "string", "nullable": false},
+    {"name": "sub_category", "type": "string", "nullable": true},
+    {"name": "brand", "type": "string", "nullable": true},
+    {"name": "unit_price", "type": "decimal(10,2)", "nullable": false},
+    {"name": "is_active", "type": "boolean", "nullable": false},
+    {"name": "effective_date", "type": "date", "nullable": false}
+  ]
+}

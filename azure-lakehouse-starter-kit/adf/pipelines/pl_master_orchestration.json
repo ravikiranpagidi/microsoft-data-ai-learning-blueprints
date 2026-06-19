@@ -1,0 +1,142 @@
+{
+  "name": "pl_master_orchestration",
+  "properties": {
+    "description": "End-to-end orchestration pipeline for raw ingestion, bronze, silver, data quality, and gold publishing.",
+    "parameters": {
+      "environment": {
+        "type": "String",
+        "defaultValue": "dev"
+      }
+    },
+    "variables": {
+      "batch_id": {
+        "type": "String"
+      }
+    },
+    "activities": [
+      {
+        "name": "Set batch id",
+        "type": "SetVariable",
+        "typeProperties": {
+          "variableName": "batch_id",
+          "value": {
+            "value": "@pipeline().RunId",
+            "type": "Expression"
+          }
+        }
+      },
+      {
+        "name": "Ingest source files to raw",
+        "type": "ExecutePipeline",
+        "dependsOn": [
+          {
+            "activity": "Set batch id",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "pl_ingest_to_raw",
+            "type": "PipelineReference"
+          },
+          "parameters": {
+            "batch_id": {
+              "value": "@variables('batch_id')",
+              "type": "Expression"
+            }
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "Ingest bronze tables",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          {
+            "activity": "Ingest source files to raw",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "notebookPath": "/Repos/<repo>/azure-lakehouse-starter-kit/databricks/notebooks/01_bronze/ingest_order_bronze",
+          "baseParameters": {
+            "batch_id": {
+              "value": "@variables('batch_id')",
+              "type": "Expression"
+            },
+            "environment": {
+              "value": "@pipeline().parameters.environment",
+              "type": "Expression"
+            }
+          }
+        },
+        "linkedServiceName": {
+          "referenceName": "ls_databricks",
+          "type": "LinkedServiceReference"
+        }
+      },
+      {
+        "name": "Transform bronze to silver",
+        "type": "ExecutePipeline",
+        "dependsOn": [
+          {
+            "activity": "Ingest bronze tables",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "pl_bronze_to_silver",
+            "type": "PipelineReference"
+          },
+          "parameters": {
+            "batch_id": {
+              "value": "@variables('batch_id')",
+              "type": "Expression"
+            },
+            "environment": {
+              "value": "@pipeline().parameters.environment",
+              "type": "Expression"
+            }
+          },
+          "waitOnCompletion": true
+        }
+      },
+      {
+        "name": "Publish silver to gold",
+        "type": "ExecutePipeline",
+        "dependsOn": [
+          {
+            "activity": "Transform bronze to silver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "pipeline": {
+            "referenceName": "pl_silver_to_gold",
+            "type": "PipelineReference"
+          },
+          "parameters": {
+            "batch_id": {
+              "value": "@variables('batch_id')",
+              "type": "Expression"
+            }
+          },
+          "waitOnCompletion": true
+        }
+      }
+    ],
+    "annotations": [
+      "azure-lakehouse-starter-kit",
+      "master"
+    ]
+  }
+}

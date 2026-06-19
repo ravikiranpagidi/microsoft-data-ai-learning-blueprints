@@ -1,0 +1,36 @@
+name: Azure Lakehouse Starter Kit CI
+
+on:
+  pull_request:
+    paths:
+      - "azure-lakehouse-starter-kit/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "azure-lakehouse-starter-kit/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependency
+        run: python -m pip install --upgrade pytest
+
+      - name: Compile Python files
+        run: |
+          python -m compileall azure-lakehouse-starter-kit/databricks/notebooks azure-lakehouse-starter-kit/scripts
+
+      - name: Validate notebooks and JSON
+        run: python azure-lakehouse-starter-kit/scripts/validate_notebooks.py
+
+      - name: Run tests
+        run: python -m pytest azure-lakehouse-starter-kit/tests

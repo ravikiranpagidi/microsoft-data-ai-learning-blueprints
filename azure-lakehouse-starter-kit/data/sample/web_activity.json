@@ -1,0 +1,10 @@
+{"event_id":"WEB1001","customer_id":"CUST001","event_timestamp":"2024-06-01T08:15:22Z","event_type":"product_view","product_id":"PROD001","session_id":"S001","device_type":"desktop","traffic_source":"email"}
+{"event_id":"WEB1002","customer_id":"CUST001","event_timestamp":"2024-06-01T08:18:01Z","event_type":"add_to_cart","product_id":"PROD001","session_id":"S001","device_type":"desktop","traffic_source":"email"}
+{"event_id":"WEB1003","customer_id":"CUST002","event_timestamp":"2024-06-02T11:03:44Z","event_type":"product_view","product_id":"PROD002","session_id":"S002","device_type":"mobile","traffic_source":"paid_search"}
+{"event_id":"WEB1004","customer_id":"CUST004","event_timestamp":"2024-06-05T19:20:12Z","event_type":"checkout_start","product_id":"PROD003","session_id":"S003","device_type":"tablet","traffic_source":"organic"}
+{"event_id":"WEB1005","customer_id":"CUST006","event_timestamp":"2024-06-08T13:09:55Z","event_type":"store_locator","product_id":"PROD006","session_id":"S004","device_type":"mobile","traffic_source":"direct"}
+{"event_id":"WEB1006","customer_id":"CUST007","event_timestamp":"2024-06-10T09:45:37Z","event_type":"product_view","product_id":"PROD008","session_id":"S005","device_type":"desktop","traffic_source":"social"}
+{"event_id":"WEB1007","customer_id":"CUST008","event_timestamp":"2024-06-12T17:33:18Z","event_type":"cart_abandon","product_id":"PROD008","session_id":"S006","device_type":"mobile","traffic_source":"paid_search"}
+{"event_id":"WEB1008","customer_id":"CUST009","event_timestamp":"2024-06-15T12:10:08Z","event_type":"product_view","product_id":"PROD005","session_id":"S007","device_type":"desktop","traffic_source":"email"}
+{"event_id":"WEB1009","customer_id":"CUST010","event_timestamp":"2024-06-18T16:27:41Z","event_type":"product_view","product_id":"PROD010","session_id":"S008","device_type":"mobile","traffic_source":"organic"}
+{"event_id":"WEB1010","customer_id":"CUST011","event_timestamp":"2024-06-21T10:02:29Z","event_type":"checkout_complete","product_id":"PROD001","session_id":"S009","device_type":"desktop","traffic_source":"direct"}

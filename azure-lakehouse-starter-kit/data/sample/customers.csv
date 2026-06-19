@@ -1,0 +1,13 @@
+customer_id,first_name,last_name,email,phone,loyalty_tier,customer_segment,signup_date,status,state,country
+CUST001,Ava,Patel,ava.patel@example.com,555-0101,Gold,Family,2024-01-08,Active,WA,USA
+CUST002,Noah,Kim,noah.kim@example.com,555-0102,Silver,Young Professional,2024-01-15,Active,CA,USA
+CUST003,Mia,Garcia,mia.garcia@example.com,555-0103,Bronze,Student,2024-02-01,Active,TX,USA
+CUST004,Liam,Smith,liam.smith@example.com,555-0104,Gold,Premium,2024-02-12,Active,NY,USA
+CUST005,Sophia,Chen,sophia.chen@example.com,555-0105,Silver,Family,2024-03-03,Inactive,IL,USA
+CUST006,Ethan,Brown,ethan.brown@example.com,555-0106,Bronze,Value Shopper,2024-03-10,Active,AZ,USA
+CUST007,Isabella,Davis,isabella.davis@example.com,555-0107,Platinum,Premium,2024-03-22,Active,MA,USA
+CUST008,Lucas,Wilson,lucas.wilson@example.com,555-0108,Gold,Young Professional,2024-04-04,Active,CO,USA
+CUST009,Amelia,Martin,amelia.martin@example.com,555-0109,Silver,Family,2024-04-19,Active,FL,USA
+CUST010,James,Lee,james.lee@example.com,555-0110,Bronze,Student,2024-05-02,Active,OR,USA
+CUST011,Harper,Walker,harper.walker@example.com,555-0111,Gold,Premium,2024-05-14,Active,NJ,USA
+CUST012,Benjamin,Hall,benjamin.hall@example.com,555-0112,Silver,Value Shopper,2024-05-28,Active,GA,USA

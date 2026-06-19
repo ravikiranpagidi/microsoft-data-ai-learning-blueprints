@@ -4,7 +4,7 @@
 
 This repository is being organized as a single home for Microsoft Data and AI learning projects. Each major topic lives in its own folder so the community can star, fork, watch, and contribute to one central repository while still keeping every learning path clean and focused.
 
-The collection currently includes Microsoft Fabric Data Engineering and Microsoft Fabric Real-Time Intelligence blueprints. Each blueprint is designed as a practical topic folder with documentation, implementation assets, architecture guidance, and community-ready learning material.
+The collection currently includes Microsoft Fabric Data Engineering, Microsoft Fabric Real-Time Intelligence, and Azure Lakehouse starter kit blueprints. Each blueprint is designed as a practical topic folder with documentation, implementation assets, architecture guidance, and community-ready learning material.
 
 ## Why This Repo Uses Topic Folders
 
@@ -24,6 +24,7 @@ A single-topic repository is easy to start, but a topic-folder structure scales 
 | --- | --- | --- | --- |
 | [fabric-data-engineering-blueprint](fabric-data-engineering-blueprint/README.md) | Microsoft Fabric Data Engineering | Active | Fabric beginners, Azure data engineers, Power BI developers, architects, students, and enterprise proof-of-concept teams |
 | [fabric-real-time-intelligence-blueprint](fabric-real-time-intelligence-blueprint/README.md) | Microsoft Fabric Real-Time Intelligence | Active | Streaming analytics learners, operations analytics teams, Fabric practitioners, KQL learners, and architects building real-time proofs of concept |
+| [azure-lakehouse-starter-kit](azure-lakehouse-starter-kit/README.md) | Azure Lakehouse Starter Kit | Active | Azure Data Factory, ADLS Gen2, Databricks, Delta Lake, Power BI, and enterprise lakehouse learners |
 
 ## Featured Blueprint
 
@@ -66,6 +67,25 @@ Operational events
 
 It uses a **Smart Logistics and Operations Monitoring** sample domain with shipment events, vehicle telemetry, warehouse sensor readings, customer app signals, order system events, and optional weather context.
 
+### Azure Lakehouse Starter Kit
+
+[Open the Azure Lakehouse starter kit](azure-lakehouse-starter-kit/README.md)
+
+This blueprint teaches a practical Azure Lakehouse implementation flow:
+
+```text
+Retail source data
+-> Azure Data Factory metadata-driven ingestion
+-> ADLS Gen2 raw landing zone
+-> Azure Databricks Bronze Delta tables
+-> Silver cleaned and validated Delta tables
+-> Gold dimensional model and customer 360
+-> Databricks SQL and Power BI consumption
+-> CI/CD, governance, cost, and production readiness guidance
+```
+
+It uses a **Retail Customer Analytics** sample domain with customers, products, orders, order items, payments, inventory, and web activity.
+
 ## Suggested Future Topics
 
 These folders can be added later using the same blueprint style:
@@ -73,7 +93,6 @@ These folders can be added later using the same blueprint style:
 | Future Folder | Possible Topic |
 | --- | --- |
 | `power-bi-semantic-modeling-blueprint/` | Power BI modeling, DAX, relationships, deployment, and governance |
-| `azure-data-engineering-blueprint/` | Azure Data Factory, ADLS Gen2, Synapse, Databricks, and orchestration patterns |
 | `microsoft-purview-governance-blueprint/` | Catalog, lineage, classification, ownership, and governance operating model |
 | `azure-ai-data-blueprint/` | AI-ready data engineering, vector search, RAG data preparation, and responsible AI patterns |
 
@@ -88,7 +107,7 @@ These folders can be added later using the same blueprint style:
 |-- .github/
 |   |-- ISSUE_TEMPLATE/
 |   `-- pull_request_template.md
-`-- fabric-data-engineering-blueprint/
+|-- fabric-data-engineering-blueprint/
     |-- README.md
     |-- docs/
     |-- architecture/
@@ -105,7 +124,7 @@ These folders can be added later using the same blueprint style:
     |-- roadmap/
     |-- community/
     `-- wiki/
-`-- fabric-real-time-intelligence-blueprint/
+|-- fabric-real-time-intelligence-blueprint/
     |-- README.md
     |-- docs/
     |-- diagrams/
@@ -115,6 +134,19 @@ These folders can be added later using the same blueprint style:
     |-- lakehouse/
     |-- powerbi/
     |-- samples/
+    |-- tests/
+    `-- wiki/
+`-- azure-lakehouse-starter-kit/
+    |-- README.md
+    |-- docs/
+    |-- diagrams/
+    |-- adf/
+    |-- databricks/
+    |-- sql/
+    |-- data/
+    |-- schemas/
+    |-- cicd/
+    |-- scripts/
     |-- tests/
     `-- wiki/
 ```

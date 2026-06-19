@@ -1,0 +1,18 @@
+{
+  "dataset": "customers",
+  "format": "csv",
+  "primaryKey": ["customer_id"],
+  "columns": [
+    {"name": "customer_id", "type": "string", "nullable": false},
+    {"name": "first_name", "type": "string", "nullable": false},
+    {"name": "last_name", "type": "string", "nullable": false},
+    {"name": "email", "type": "string", "nullable": false},
+    {"name": "phone", "type": "string", "nullable": true},
+    {"name": "loyalty_tier", "type": "string", "nullable": false},
+    {"name": "customer_segment", "type": "string", "nullable": true},
+    {"name": "signup_date", "type": "date", "nullable": false},
+    {"name": "status", "type": "string", "nullable": false},
+    {"name": "state", "type": "string", "nullable": true},
+    {"name": "country", "type": "string", "nullable": true}
+  ]
+}
